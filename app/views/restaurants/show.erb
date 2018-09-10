@@ -1,45 +1,42 @@
 <h4><%= @restaurant.name %></h4>
-<p> <%=  @reviews.rating%></p>
-<p><%= self.street_name %></p>
-<p><%= self.city_name %>, <%= self.state %> <%= self.zipcode %></p>
-<p><%= self.phone_num %></p>
+<p> <%= @restaurant.avg_rating%></p>
+<p><%= @restaurant.street_name %></p>
+<p><%= @restaurant.city_name %>, <%= @restaurant.state %> <%= @restaurant.zipcode %></p>
+<p><%= @restaurant.phone_num %></p>
 
-# button to review
-
-# menu that we should save into the `menu.html.erb` partial
 
 <hr>
 <h5>Drinks</h5>
-<div class="grid-container">
-  <% @restaurant.menu_category("drinks").each do |item| %>
-    <div class="menu_item">
-      <a href="/food_items/#{item.id}/add_to_cart">
-        content
-      </a>
-    </div>
-  <% end %>
-</div>
+  <div class="grid-container">
+    <% @restaurant.menu_category("drinks").each do |item| %>
+      <div class="menu_item">
+        <a href="/food_items/#{item.id}/add_to_cart">
+
+        </a>
+      </div>
+    <% end %>
+  </div>
 <h5>Appetizers</h5>
-<div class="grid-container">
-  <% @restaurant.menu_category("appetizers").each do |item| %>
-  <div class="menu_item">
-    <%= #INSERT ITEM DATA %>
+  <div class="grid-container">
+    <% @restaurant.menu_category("appetizers").each do |item| %>
+      <div class="menu_item">
+
+      </div>
+    <% end %>
   </div>
-  <% end %>
-</div
 <h5>Mains</h5>
-<div class="grid-container">
-  <% @restaurant.menu_category("mains").each do |item| %>
-  <div class="menu_item">
-    <%= #INSERT ITEM DATA %>
+  <div class="grid-container">
+    <% @restaurant.menu_category("mains").each do |item| %>
+      <div class="menu_item">
+
+      </div>
+    <% end %>
   </div>
-  <% end %>
-</div>
-<h5>Desserts/h5>
-<div class="grid-container">
-  <% @restaurant.menu_category("desserts").each do |item| %>
-  <div class="menu_item">
-    <%= #INSERT ITEM DATA %>
+<h5>Desserts</h5>
+  <div class="grid-container">
+    <% @restaurant.menu_category("desserts").each do |item| %>
+    <div class="menu_item">
+
+    </div>
+    <% end %>
   </div>
-  <% end %>
-</div>

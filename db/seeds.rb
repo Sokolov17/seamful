@@ -1,7 +1,10 @@
 require 'faker'
-Restaurant.destroy_all
-User.destroy_all
-Review.destroy_all
+# Restaurant.destroy_all
+# User.destroy_all
+# Review.destroy_all
+# FoodItem.destroy_all
+# Order.destroy_all
+# Menuorder.destroy_all
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -71,14 +74,23 @@ rest_8 = Restaurant.create(name: "Ofrenda",
 p "created restaurants"
 
 #USERS
-20.times do User.create([
-  {first_name: Faker::Name.unique.first_name, last_name:Faker::Name.unique.last_name, street_name: Faker::Address.street_address, city_name: Faker::Address.city, zipcode: Faker::Address.zip_code, state: Faker::Address.state_abbr, credit_card_num: Faker::Bank.account_number(16), phone_num: Faker::PhoneNumber.phone_number, email: Faker::Internet.unique.email},
-  ])
+20.times do User.create(first_name: Faker::Name.unique.first_name, last_name:Faker::Name.unique.last_name, street_name: Faker::Address.street_address, city_name: Faker::Address.city, zipcode: Faker::Address.zip_code, state: Faker::Address.state_abbr, credit_card_num: Faker::Bank.account_number(16), phone_num: Faker::PhoneNumber.phone_number, email: Faker::Internet.unique.email)
 end
 p "created users"
 
-10.times do Review.create([
-  {restaurant_id: Restaurant.all.sample.id, user_id: User.all.sample.id, rating: rand(1...5), content: Faker::RuPaul.quote}
-  ])
+10.times do Review.create(restaurant_id: Restaurant.all.sample.id, user_id: User.all.sample.id, rating: rand(1...5), content: Faker::RuPaul.quote)
 end
 p "created reviews"
+
+30.times do FoodItem.create(food_name: Faker::Food.dish, price: rand(10.0..30.00).round(2), restaurant_id: Restaurant.all.sample.id, description: Faker::Food.description)
+end
+p "created fooditems"
+
+20.times do Order.create(restaurant_id: Restaurant.all.sample.id, user_id: User.all.sample.id, menuorder_id: Menuorder.all.sample.id)
+end
+p "created orders"
+
+20.times do Menuorder.create(order_id: Order.all.sample.id, food_item_id: FoodItem.all.sample.id)
+end
+
+p "created menuorder"

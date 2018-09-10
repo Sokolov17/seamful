@@ -9,4 +9,8 @@ class Restaurant < ApplicationRecord
     self.food_items.where(category: cat)
   end
 
+  def avg_rating
+    self.reviews.sum(:rating)
+  end
+
 end
