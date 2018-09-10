@@ -13,6 +13,7 @@ class ReviewsController < ApplicationController
   end
 
   def create
+    byebug
     @review = Review.new(review_params)
     if @review.save
       redirect_to reviews_path #redirect to User's review path if logged in

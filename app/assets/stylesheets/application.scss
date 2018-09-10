@@ -17,13 +17,48 @@
 
 #logo {
   font-family: 'Pacifico', cursive;
-  color: rgb(120,149,1);
+  color: rgb(244,136,110);
+  font-size: 2em;
 }
+
+.home {
+  background: #C6FFDD;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 
 .nav-color {
   background-color: rgba(153,46,13,0.7);
 }
 
-.home-banner {
-  background-image: url("filename.jpeg")
+.full-hero {
+  background-color: #c7dbfc;
+  background-size: cover;
+  box-sizing: border-box;
+  height: 70vh;
+  width: auto;
+  position: relative;
+  margin-bottom: 10%;
+  padding: 2px;
+  h3 {
+    color: white;
+    font-family: 'Pacifico', cursive;
+    color: white;
+    text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;
+    font-size: 50px;
+    position: absolute;
+    left: 45%;
+    top: 50%;
+  }
+}
+.hero-home {
+  background-image: url("Banner_Home.jpg");
+  background-position: center top;
+  max-width: 100%;
+}
+
+span.nav-pad {
+  padding-left: 7px;
+  padding-right: 7px;
 }
