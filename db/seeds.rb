@@ -1,5 +1,7 @@
 require 'faker'
 Restaurant.destroy_all
+User.destroy_all
+Review.destroy_all
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -69,10 +71,14 @@ rest_8 = Restaurant.create(name: "Ofrenda",
 p "created restaurants"
 
 #USERS
-users = User.create([
-  {first_name: "Maddy", last_name:}
+20.times do User.create([
+  {first_name: Faker::Name.unique.first_name, last_name:Faker::Name.unique.last_name, street_name: Faker::Address.street_address, city_name: Faker::Address.city, zipcode: Faker::Address.zip_code, state: Faker::Address.state_abbr, credit_card_num: Faker::Bank.account_number(16), phone_num: Faker::PhoneNumber.phone_number, email: Faker::Internet.unique.email},
   ])
+end
+p "created users"
 
-reviews = Review.create([
-  {restaurant_id: Restaurant.all.sample.id, user_id: User.all.sample.id, }
+10.times do Review.create([
+  {restaurant_id: Restaurant.all.sample.id, user_id: User.all.sample.id, rating: rand(1...5), content: Faker::RuPaul.quote}
   ])
+end
+p "created reviews"
