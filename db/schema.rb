@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_10_140047) do
+ActiveRecord::Schema.define(version: 2018_09_10_154935) do
 
   create_table "food_items", force: :cascade do |t|
     t.string "food_name"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2018_09_10_140047) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "category"
     t.index ["restaurant_id"], name: "index_food_items_on_restaurant_id"
   end
 

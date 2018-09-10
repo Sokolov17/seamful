@@ -18,15 +18,15 @@ rest_1 = Restaurant.create(name: "Taverna Kyclades",
                           state: "NY",
                           phone_num: "212-432-0011",
                           cuisine: "Greek",
-                          price_range: "$25-$45")
+                          price_range: '$$')
 rest_2 = Restaurant.create(name: "L'Artusi",
                           street_name: "228 West 10th Street",
                           city_name: "New York",
                           zipcode: "10014",
                           state: "NY",
                           phone_num: "212-255-5757",
-                          cuisine: "Italian"
-                          price_range: "$50-$80")
+                          cuisine: "Italian",
+                          price_range: "$$$")
 rest_3 = Restaurant.create(name: "Somtum Dur",
                           street_name: "85 Avenue A",
                           city_name: "New York",
@@ -34,7 +34,7 @@ rest_3 = Restaurant.create(name: "Somtum Dur",
                           state: "NY",
                           phone_num: "212-260-8570",
                           cuisine: "Thai",
-                          price_range: "$25-$45")
+                          price_range: "$$")
 rest_4 = Restaurant.create(name: "The Marshall",
                           street_name: "628 10th Avenue",
                           city_name: "New York",
@@ -42,7 +42,7 @@ rest_4 = Restaurant.create(name: "The Marshall",
                           state: "NY",
                           phone_num: "212-582-6300",
                           cuisine: "New American",
-                          price_range: "$50-$70")
+                          price_range: "$$$")
 rest_6 = Restaurant.create(name: "Black Iron Burger",
                           street_name: "540 E 5th Street",
                           city_name: "New York",
@@ -50,7 +50,7 @@ rest_6 = Restaurant.create(name: "Black Iron Burger",
                           state: "NY",
                           phone_num: "212-677-6067",
                           cuisine: "New American",
-                          price_range: "$15-$30")
+                          price_range: "$")
 rest_7 = Restaurant.create(name: "Adrienne's Pizzabar",
                           street_name: "54 Stone Street",
                           city_name: "New York",
@@ -58,7 +58,7 @@ rest_7 = Restaurant.create(name: "Adrienne's Pizzabar",
                           state: "NY",
                           phone_num: "212-248-3838",
                           cuisine: "Pizza",
-                          price_range: "$25-$40")
+                          price_range: "$$")
 rest_8 = Restaurant.create(name: "Ofrenda",
                           street_name: "113 7th Avenue South",
                           city_name: "New York",
@@ -66,7 +66,7 @@ rest_8 = Restaurant.create(name: "Ofrenda",
                           state: "NY",
                           phone_num: "212-924-2305",
                           cuisine: "Mexican",
-                          price_range: "$30-$45")
+                          price_range: "$$")
 
 p "created restaurants"
 
