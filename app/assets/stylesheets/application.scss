@@ -10,6 +10,20 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
  */
+
+@import 'bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+#logo {
+  font-family: 'Pacifico', cursive;
+  color: rgb(120,149,1);
+}
+
+.nav-color {
+  background-color: rgba(153,46,13,0.7);
+}
+
+.home-banner {
+  background-image: url("filename.jpeg")
+}
