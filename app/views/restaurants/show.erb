@@ -1,0 +1,40 @@
+<h4><%= @restaurant.name %></h4>
+<p> <%= @restaurant.avg_rating%></p>
+<p><%= @restaurant.street_name %></p>
+<p><%= @restaurant.city_name %>, <%= @restaurant.state %> <%= @restaurant.zipcode %></p>
+<p><%= @restaurant.phone_num %></p>
+
+
+<hr>
+<h5>Drinks</h5>
+  <div class="grid-container">
+    <% @restaurant.menu_category("drinks").each do |item| %>
+      <div class="menu_item">
+        <p><%= item.food_name %></p>
+      </div>
+    <% end %>
+  </div>
+<h5>Appetizers</h5>
+  <div class="grid-container">
+    <% @restaurant.menu_category("appetizers").each do |item| %>
+      <div class="menu_item">
+        <p><%= item.food_name %></p>
+      </div>
+    <% end %>
+  </div>
+<h5>Mains</h5>
+  <div class="grid-container">
+    <% @restaurant.menu_category("mains").each do |item| %>
+      <div class="menu_item">
+        <p><%= item.food_name %></p>
+      </div>
+    <% end %>
+  </div>
+<h5>Desserts</h5>
+  <div class="grid-container">
+    <% @restaurant.menu_category("desserts").each do |item| %>
+    <div class="menu_item">
+      <p><%= item.food_name %></p>
+    </div>
+    <% end %>
+  </div>

@@ -1,0 +1,11 @@
+<h1>#<%= @order.id %></h1>
+
+<p>Date: <%= @order.created_at %> </p>
+<p>Restaurant: <%= @order.restaurant.name %> </p>
+<h3>Food ordered: </h3>
+    <% @order.menuorders.each do |menuorder| %>
+    <%= menuorder.food_item.food_name %>
+    <p>Price: $<%= menuorder.food_item.price %></p>
+    <% end %>
+
+<p>Total: $<%= @order.total %></p>
