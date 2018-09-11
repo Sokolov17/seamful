@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :users
   get '/about', to: 'static_pages#about', as: 'about'
   get '/contact', to: 'static_pages#contact', as: 'contact'
+  patch '/cart', to: 'cart#update', as: 'edit_cart' 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

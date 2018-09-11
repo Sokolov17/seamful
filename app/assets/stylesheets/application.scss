@@ -129,3 +129,33 @@ span.nav-pad {
   height: 30em;
   width: auto;
 }
+
+.food-border {
+  border: 1px solid rgb(230,141,116);
+  padding: 5px;
+  margin: 5px;
+  box-shadow: 10px 10px 5px grey;
+  margin: 10px 10px;
+  border-radius: 8px;
+  h6 {
+    display: inline;
+    font-size: 1em;
+  }
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.description {
+  font-family: Courier;
+  clear: right;
+}
+
+.price {
+  font-size: 2em;
+  float: right;
+  display: inline;
+}
