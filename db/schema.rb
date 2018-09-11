@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_10_154935) do
+ActiveRecord::Schema.define(version: 2018_09_11_144801) do
 
   create_table "food_items", force: :cascade do |t|
     t.string "food_name"
@@ -36,10 +36,8 @@ ActiveRecord::Schema.define(version: 2018_09_10_154935) do
   create_table "orders", force: :cascade do |t|
     t.integer "restaurant_id"
     t.integer "user_id"
-    t.integer "menuorder_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["menuorder_id"], name: "index_orders_on_menuorder_id"
     t.index ["restaurant_id"], name: "index_orders_on_restaurant_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
@@ -80,6 +78,7 @@ ActiveRecord::Schema.define(version: 2018_09_10_154935) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
   end
 
 end
