@@ -1,17 +1,10 @@
 require 'faker'
-# Restaurant.destroy_all
-# User.destroy_all
-# Review.destroy_all
-# FoodItem.destroy_all
-# Order.destroy_all
-# Menuorder.destroy_all
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Menuorder.destroy_all
+Order.destroy_all
+FoodItem.destroy_all
+Review.destroy_all
+User.destroy_all
+Restaurant.destroy_all
 
 # RESTAURANT SEEDS
 rest_1 = Restaurant.create(name: "Taverna Kyclades",
@@ -155,7 +148,7 @@ puts "Mains"
   description: "Soda", category: "Drinks")
   puts " end drinks"
 
-20.times do Order.create(restaurant_id: Restaurant.all.sample.id, user_id: User.all.sample.id, menuorder_id: Menuorder.all.sample.id)
+20.times do Order.create(restaurant_id: Restaurant.all.sample.id, user_id: User.all.sample.id)
 end
 p "created orders"
 

@@ -10,7 +10,10 @@ class Restaurant < ApplicationRecord
   end
 
   def avg_rating
-    self.reviews.sum(:rating)/self.reviews.count #handle dividing by 0
+    if self.reviews.sum(:rating) != 0
+      self.reviews.sum(:rating)/self.reviews.count
+    else
+      return "There are not enough "
   end
 
 end

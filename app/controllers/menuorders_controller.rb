@@ -5,6 +5,8 @@ class MenuordersController < ApplicationController
   end
 
   def create
+    @menuorder = Menuorder.create
+    
   end
-  
+
 end
