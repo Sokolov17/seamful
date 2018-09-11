@@ -10,7 +10,7 @@ class Restaurant < ApplicationRecord
   end
 
   def avg_rating
-    self.reviews.sum(:rating)
+    self.reviews.sum(:rating)/self.reviews.count #handle dividing by 0
   end
 
 end
