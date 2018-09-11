@@ -1,0 +1,30 @@
+<%= form_for @user do |f| %>
+
+  <ol>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ol>
+
+  <%= f.label :email %>
+  <%= f.text_field :email %><br>
+  <%= f.label :password %>
+  <%= f.password_field :password %><br>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %><br>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %><br>
+  <%= f.label :street_name %>
+  <%= f.text_field :street_name %><br>
+  <%= f.label :city_name %>
+  <%= f.text_field :city_name%><br>
+  <%= f.label :zipcode %>
+  <%= f.text_field :zipcode%><br>
+  <%= f.label "Phone number" %>
+  <%= f.telephone_field :phone_num %><br>
+  <%= f.label "Credit card number" %>
+  <%= f.text_field :credit_card_num %><br>
+
+<br></br>
+  <%= f.submit %>
+  <% end %>

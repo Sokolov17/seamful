@@ -1,1 +1,12 @@
 <h1>All Reviews</h1>
+
+<ul>
+<%@reviews.each do |review| %>
+  <h4><%=link_to review.restaurant.name, edit_review_path(review) %></h4>
+  <br>User Name: <%= review.user.first_name %>
+  <br>Rating: <%= review.rating %>
+  <br>Review: <%= review.content %>
+<br></br>
+
+<% end %>
+</ul>
