@@ -1,16 +1,22 @@
 class CartController < ApplicationController
 
-
-
-  def update
-    session[:cart] << [params[:food_item_id]] = params[:quantity]
-
-
-    @fooditem = FoodItem.find(params[:food_item_id])
-    add_to_cart(params[:food_item_id])
-    flash[:notice] = "Successfully added"
-    redirect_to restaurant_path(@fooditem.restaurant)
+  def show
+    @food_items = cart.map do |item|
+      FoodItem.find(item)
+    end
   end
 
+  def update
+    params[:items].each do |key, value|
+      if value != ""
+        value = value.to_i
+        value.times do
+          cart << key
+        end
+      end
+    end
+    redirect_to cart_path
+
+  end
 
 end

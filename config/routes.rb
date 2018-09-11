@@ -1,14 +1,21 @@
 Rails.application.routes.draw do
-  get '/', to: 'static_pages#home'
+  get '/login', to: 'sessions#new', as: 'login'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy', as: 'logout'
+  get '/', to: 'static_pages#home', as: 'home'
   resources :menuorders
-  resources :orders
+  # resources :orders
   resources :reviews
   resources :food_items
   resources :restaurants
   resources :users
   get '/about', to: 'static_pages#about', as: 'about'
   get '/contact', to: 'static_pages#contact', as: 'contact'
-  patch '/cart', to: 'cart#update', as: 'edit_cart' 
+  get '/cart', to: 'cart#show', as: 'cart'
+  patch '/cart', to: 'cart#update', as: 'edit_cart'
+  post '/orders', to: 'orders#create', as: 'orders'
+  get '/orders/:id', to: 'orders#show', as: 'order'
+  get '/orders', to: 'orders#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

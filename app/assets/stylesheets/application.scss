@@ -21,12 +21,34 @@
   font-size: 2em;
 }
 
+
 .navbar {
   border-bottom: 5px solid rgb(215,248,212);
 }
 
+.flex-container{
+  display: flex;
+  justify-content: center;
+}
 
-.home {
+.flex-container > div{
+  width:200px;
+  margin: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.home{
+  background-image: url("Banner_Home.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-size: cover;
+  position:relative;
+  height: 75vh;
+
+}
+.grad {
   height: 60%;
   width: auto;
   margin-bottom: 5px;
@@ -36,46 +58,50 @@
   background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-
-.nav-color {
-  background-color: rgba(153,46,13,0.7);
+.container{
+  font-size: 3vw;
 }
 
-.full-hero {
-  background-color: #c7dbfc;
-  background-size: cover;
-  box-sizing: border-box;
-  height: 70vh;
-  width: auto;
-  position: relative;
-  margin-bottom: 10%;
-  padding: 2px;
 
-  h3 {
-    color: white;
-    font-family: 'Pacifico', cursive;
-    color: white;
-    text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;
-    font-size: 50px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-.hero-home {
-  background-image: url("Banner_Home.jpg");
-  background-position: center top;
-  max-width: 100%;
-}
-
-.home-options {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  padding-top: 60px;
-  transform: translate(-50%, -50%);
-}
+// .nav-color {
+//   background-color: rgba(153,46,13,0.7);
+// }
+//
+// .full-hero {
+//   background-color: #c7dbfc;
+//   background-size: cover;
+//   box-sizing: border-box;
+//   height: 70vh;
+//   width: auto;
+//   position: relative;
+//   margin-bottom: 10%;
+//   padding: 2px;
+//
+//   h3 {
+//     color: white;
+//     font-family: 'Pacifico', cursive;
+//     color: white;
+//     text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;
+//     font-size: 50px;
+//     position: absolute;
+//     left: 50%;
+//     top: 50%;
+//     transform: translate(-50%, -50%);
+//   }
+// }
+// .hero-home {
+//   background-image: url("Banner_Home.jpg");
+//   background-position: center top;
+//   max-width: 100%;
+// }
+//
+// .home-options {
+//   position: fixed;
+//   left: 50%;
+//   top: 50%;
+//   padding-top: 60px;
+//   transform: translate(-50%, -50%);
+// }
 
 span.nav-pad {
   padding-left: 7px;
@@ -126,7 +152,7 @@ span.nav-pad {
 }
 
 .empty-fill {
-  height: 30em;
+  height: 3em;
   width: auto;
 }
 

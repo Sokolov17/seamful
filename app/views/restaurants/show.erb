@@ -7,36 +7,8 @@
 <%= link_to "Write a Review", new_review_path %>
 
 
-
-<hr>
-<h5>TEST</h5>
-<div class="container">
-  <div class="row">
-  <% @restaurant.menu_category("Drinks").each do |item| %>
-    <div class="col-md-6 food-border">
-      <h6><%= item.food_name %><h6>
-        <p class="price"> $<%= item.price %></p>
-        <p class="description"><em><%= item.description %></em><p>
-
-        <%= form_tag edit_cart_path, method: :patch, class: "navbar-form navbar-left search-form" do %>
-          <%= hidden_field_tag 'food_item_id', "#{item.id}" %>
-          <%= number_field_tag(
-              :quantity,
-              params[:quantity],
-              placeholder: "Quantity",
-              class: "form-control"
-          ) %>
-        <%= submit_tag "Submit" %>
-        <% end %>
-
-
-
-    </div>
-  <% end %>
-  <div.clearfix:after>
-  <div.empty-fill>
-
-
+<%= form_tag edit_cart_path, method: :patch do  %>
+<input name="restaurant_id" value="<%= @restaurant.id %>" type="hidden" />
 
 <h5>Drinks</h5>
 <div class="container">
@@ -44,8 +16,9 @@
   <% @restaurant.menu_category("Drinks").each do |item| %>
     <div class="col-md-6 food-border">
       <h6><%= item.food_name %><h6>
-        <p class="price">  <%= link_to "Add to Cart", new_menuorder_path, remote: true, class: "btn btn-primary" %> $<%= item.price %></p>
+        <p class="price"> $<%= item.price %></p>
         <p class="description"><em><%= item.description %></em><p>
+          Quantity: <input type="number" name="items[<%= item.id %>]">
     </div>
   <% end %>
   <div.clearfix:after>
@@ -56,9 +29,9 @@
   <% @restaurant.menu_category("Appetizers").each do |item| %>
     <div class="col-md-6 food-border">
       <h6><%= item.food_name %><h6>
-        <p class="price">
-          <%= link_to "Add to Cart", new_menuorder_path, remote: true, class: "btn btn-primary" %> $<%= item.price %></p>
+        <p class="price"> $<%= item.price %></p>
         <p class="description"><em><%= item.description %></em><p>
+          Quantity: <input type="number" name="items[<%= item.id %>]">
     </div>
   <% end %>
   <div.clearfix:after>
@@ -69,8 +42,9 @@
   <% @restaurant.menu_category("Mains").each do |item| %>
     <div class="col-md-6 food-border">
       <h6><%= item.food_name %><h6>
-        <p class="price">  <%= link_to "Add to Cart", new_menuorder_path, remote: true, class: "btn btn-primary" %> $<%= item.price %></p>
+        <p class="price"> $<%= item.price %></p>
         <p class="description"><em><%= item.description %></em><p>
+          Quantity: <input type="number" name="items[<%= item.id %>]">
     </div>
   <% end %>
   <div.clearfix:after>
@@ -81,9 +55,14 @@
   <% @restaurant.menu_category("Desserts").each do |item| %>
     <div class="col-md-6 food-border">
       <h6><%= item.food_name %><h6>
-        <p class="price"><%= link_to "Add to Cart", new_menuorder_path, remote: true, class: "btn btn-primary" %> $<%= item.price %></p>
+        <p class="price"> $<%= item.price %></p>
         <p class="description"><em><%= item.description %></em><p>
+          Quantity: <input type="number" name="items[<%= item.id %>]">
     </div>
   <% end %>
   <div.clearfix:after>
   <div.empty-fill>
+
+<br></br>
+<%= submit_tag "Add to Cart", class: "btn btn-primary" %>
+<% end %>

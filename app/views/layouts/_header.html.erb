@@ -2,7 +2,11 @@
   <a id="logo" class="navbar-brand" href="/">Seamful</a>
     <ul class="nav navbar-nav nabar-right">
       <li class="nav-item">
-        <a class="nav-link btn btn-info" href="#"><span class="nav-pad">Sign-in</span></a>
+        <% if logged_in? %>
+          <%= button_to "Signout", logout_path, {method: :delete} %>
+        <% else %>
+          <a class="nav-link btn btn-info" href="/login"><span class="nav-pad">Sign-in</span></a>
+        <% end %>
       </li>
     </ul>
 </nav>

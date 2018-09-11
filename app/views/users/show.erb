@@ -15,7 +15,10 @@
   <%= @user.credit_card_num %><br>
 
 </p>
+<br></br>
+<%= button_to "Start an order", restaurants_path, {method: :get} %>
 
+<br></br>
 <%= button_to "Update information", edit_user_path(@user), {method: :get} %>
 
 <%= button_to "Delete my account", user_path(@user), {method: :delete} %>

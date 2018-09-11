@@ -1,20 +1,26 @@
 class UsersController < ApplicationController
+  skip_before_action :authorized, only: [:new, :create]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
     @users = User.all
+    render :index
   end
 
   def show
+    render :show
   end
 
   def new
     @user = User.new
+    render :new
   end
 
   def create
-    @user = User.create(user_params)
-    if @user.save?
+    @user = User.new(user_params)
+    if @user.save
+      session[:user_id] = @user.id
+      flash[:notice] = "Welcome to Seamful, homie!"
       redirect_to user_path(@user)
     else
       render :new
@@ -22,11 +28,17 @@ class UsersController < ApplicationController
   end
 
   def edit
+    if current_user.id == @user.id
+      render :edit
+    else
+      flash[:notice] = "You are not authorized to see this"
+      redirect_to user_path(@user)
+    end
   end
 
   def update
-    @user.update(user_params)
-    if @user.save?
+    if @user.update(user_params)
+      flash[:notice] = "Profile updated!"
       redirect_to user_path(@user)
     else
       render :edit
@@ -35,6 +47,7 @@ class UsersController < ApplicationController
 
   def destroy
     @user.destroy
+    flash[:notice] = "Account for #{@user.first_name} deleted."
     redirect_to users_path
   end
 
