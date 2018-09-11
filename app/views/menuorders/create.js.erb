@@ -1,0 +1,7 @@
+<% if @menuorder.errors.blank? %>
+  $('#menuorder-modal').modal('hide');
+  $('table tbody').append('<%= j render "menuorder_row", menuorder: @menuorder %>');
+<% else %>
+  // TODO: show the errors in the UI
+  alert('Algo falló');
+<% end %>

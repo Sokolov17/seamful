@@ -14,6 +14,7 @@
     <% @restaurant.menu_category("Drinks").each do |item| %>
       <div class="menu_item">
         <p><%= item.food_name %></p>
+        <%= link_to "Add to Cart", new_menuorder_path, remote: true, class: "btn btn-primary" %>
       </div>
     <% end %>
   </div>
@@ -22,6 +23,7 @@
     <% @restaurant.menu_category("Appetizers").each do |item| %>
       <div class="menu_item">
         <p><%= item.food_name %></p>
+        <%= link_to "Add to Cart", new_menuorder_path, remote: true, class: "btn btn-primary" %>
       </div>
     <% end %>
   </div>
@@ -30,6 +32,7 @@
     <% @restaurant.menu_category("Mains").each do |item| %>
       <div class="menu_item">
         <p><%= item.food_name %></p>
+        <%= link_to "Add to Cart", new_menuorder_path, remote: true, class: "btn btn-primary" %>
       </div>
     <% end %>
   </div>
@@ -38,6 +41,7 @@
     <% @restaurant.menu_category("Desserts").each do |item| %>
     <div class="menu_item">
       <p><%= item.food_name %></p>
+      <%= link_to "Add to Cart", new_menuorder_path, remote: true, class: "btn btn-primary" %>
     </div>
     <% end %>
   </div>
