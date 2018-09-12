@@ -1,3 +1,6 @@
-<h1> <%= @review.restaurant.name %> Reviews </h1>
+<h1> <%= @review.restaurant.name %> Review </h1>
 
-<h3>Rating: </h3>
+<h3>Rating: <%= @review.rating %> Stars</h3>
+<h4>Reviewer: <%= @review.user.fullname %>
+<br></br>
+<p><%= @review.content %></p>

@@ -4,6 +4,8 @@
 <p><%= @restaurant.city_name %>, <%= @restaurant.state %> <%= @restaurant.zipcode %></p>
 <p><%= @restaurant.phone_num %></p>
 <br>
+<%= link_to "See all reviews", restaurantreviews_path %>
+<br>
 <%= link_to "Write a Review", new_review_path %>
 
 

@@ -1,11 +1,17 @@
 class RestaurantsController < ApplicationController
-  before_action :set_restaurant, only: [:show, :edit, :update]
+  before_action :set_restaurant, only: [:show, :edit, :update, :restaurant_reviews]
 
   def index
     @restaurants = Restaurant.all
   end
 
   def show
+  end
+
+  def restaurant_reviews
+    @reviews = Review.all.select do |review|
+      review.restaurant.id == @restaurant.id
+    end
   end
 
 

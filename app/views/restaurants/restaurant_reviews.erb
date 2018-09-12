@@ -1,0 +1,6 @@
+<h1>Reviews for <%= @restaurant.name %></h1>
+
+<% @reviews.each do |review| %>
+  <br><strong> <%= link_to review.user.first_name, review_path(review) %> </strong>
+  <li>Rating: <%= review.rating %></li>
+  <% end %>
