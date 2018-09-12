@@ -34,7 +34,12 @@ class Restaurant < ApplicationRecord
     Restaurant.all.sort_by { |a| a.get_avg }.first
   end
 
-
-
+  def revenue
+    sum=0
+    self.orders.each do |order|
+      sum += order.total
+    end
+    sum
+  end
 
 end

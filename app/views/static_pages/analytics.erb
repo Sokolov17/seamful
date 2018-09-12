@@ -1,27 +1,59 @@
 <h1>Seamful Analytics</h1>
-#current users
-User.num_current_users
 
-#most active user
-Order.most_active_user (returns @user)
-
-#most reviews by user
-Review.most_reviews_by_user (returns @user)
-
-#newest user
-User.newest (returns @user)
-
-#most popular restaurants / most ordered
-Order.most_ordered
-
-#highest avg rated restaurant
-Restaurant.highest_avg_rating
-
-#lowest avg rated restaurant
-Restaurant.lowest_avg_rating
-
-#most popular dishes
-Menuorder.most_popular_dish
-
-#least popular dishes
-Menuorder.least_popular_dish
+<br>
+<h3>Number of Current Users:</h3>
+<%= User.num_current_users %>
+<br>
+<br>
+<h3>Most Active User:</h3>
+<%= Order.most_active_user.fullname %>
+<br>
+<br>
+<h3>Most Reviews Written: </h3>
+<%= Review.most_reviews_by_user.fullname %>
+<br>
+<br>
+<h3>Most Recently Registered User:</h3>
+<%= User.newest.fullname %>
+<br>
+<br>
+<h3>Most Popular / Most Ordered Restaurant:</h3>
+<%= Order.most_ordered.name %>
+<br>
+<br>
+<h3>Highest Average Rating: </h3>
+<%= Restaurant.highest_avg_rating.name %> -
+<%= Restaurant.highest_avg_rating.avg_rating %>
+<br>
+<br>
+<h3>Lowest Average Rating</h3>
+<%= Restaurant.lowest_avg_rating.name %> -
+<%= Restaurant.lowest_avg_rating.avg_rating %>
+<br>
+<br>
+<h3>Most Popular Dish</h3>
+<%= Menuorder.most_popular_dish.food_name %>
+<br>
+<br>
+<h3>Least Popular Dish</h3>
+<%= Menuorder.least_popular_dish.food_name %>
+<br>
+<br>
+<h3>Most Expensive Dish</h3>
+<%= FoodItem.most_expensive.food_name %>
+<br>
+<br>
+<h3>Most Expensive Order</h3>
+<%= Order.most_expensive.id %> -
+<%= Order.most_expensive.user.fullname %>
+<br>
+<br>
+<h3>Restaurant Revenues</h3>
+<% Restaurant.all.each do |restaurant| %>
+  <br><h5><%= restaurant.name %><h5>
+    $<%=restaurant.revenue%><br>
+  <% end %>
+<br>
+<br>
+<h3>Total User Spend</h3>
+$<%= Order.total_spend %>

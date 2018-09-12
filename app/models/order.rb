@@ -18,4 +18,16 @@ class Order < ApplicationRecord
     Restaurant.all.sort_by { |a| a.orders.length }.last
   end
 
+  def self.most_expensive
+    Order.all.sort_by { |a| a.total }.last
+  end
+
+  def self.total_spend
+    sum=0
+    Order.all.each do |order|
+      sum += order.total
+    end
+    sum
+  end
+
 end

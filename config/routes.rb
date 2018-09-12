@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/guide', to: 'static_pages#guide', as: 'guide'
   get '/about', to: 'static_pages#about', as: 'about'
   get '/contact', to: 'static_pages#contact', as: 'contact'
+  get '/analytics', to: 'static_pages#analytics', as: 'analytics'
   get '/cart', to: 'cart#show', as: 'cart'
   patch '/cart', to: 'cart#update', as: 'edit_cart'
   post '/orders', to: 'orders#create', as: 'orders'

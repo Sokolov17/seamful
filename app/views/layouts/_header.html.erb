@@ -3,7 +3,7 @@
     <ul class="nav navbar-nav nabar-right">
       <li class="nav-item">
         <% if logged_in? %>
-          <%= button_to "Signout", logout_path, {method: :delete} %>
+          <a class="nav-link btn btn-info" href="/logout" data-method="delete"><span class="nav-pad">Signout</span></a>
         <% else %>
           <a class="nav-link btn btn-info" href="/login"><span class="nav-pad">Sign-in</span></a>
         <% end %>
