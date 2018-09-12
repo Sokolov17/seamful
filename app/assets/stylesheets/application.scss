@@ -109,7 +109,7 @@ span.nav-pad {
 }
 
 .footer {
-  height: 90px;
+  height: 50px;
   margin-top: 5px;
   background-color: rgb(245,245,245);
   border-top: 1px solid black;
@@ -121,7 +121,7 @@ span.nav-pad {
   li {
     float: left;
     padding-left: 20px;
-    padding-top: 30px;
+    padding-top: 10px;
     a {
       text-decoration: none;
     }
@@ -183,4 +183,8 @@ span.nav-pad {
   font-size: 2em;
   float: right;
   display: inline;
+}
+
+body {
+  padding-left: 20px;
 }
