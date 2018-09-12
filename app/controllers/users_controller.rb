@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   skip_before_action :authorized, only: [:new, :create]
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update, :destroy, :orders, :reviews]
 
   def index
     @users = User.all
@@ -36,7 +36,7 @@ class UsersController < ApplicationController
     if current_user.id == @user.id
       render :edit
     else
-      flash[:notice] = "You are not authorized to see this"
+      flash[:notice] = "You are not authorized to do that"
       redirect_to user_path(@user)
     end
   end
@@ -51,9 +51,26 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user.destroy
-    flash[:notice] = "Account for #{@user.first_name} deleted."
-    redirect_to users_path
+    if current_user.id == @user.id
+      @user.destroy
+      flash[:notice] = "Account for #{@user.first_name} deleted."
+      redirect_to home_path
+    else
+      flash[:notice] = "You are not authorized to do that"
+      redirect_to user_path(@user)
+    end
+  end
+
+  def orders
+    @orders = Order.all.select do |order|
+      order.user == @user
+    end
+  end
+
+  def reviews
+    @reviews = Review.all.select do |review|
+      review.user == @user
+    end
   end
 
 

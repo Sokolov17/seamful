@@ -16,7 +16,9 @@ Rails.application.routes.draw do
   post '/orders', to: 'orders#create', as: 'orders'
   get '/orders/:id', to: 'orders#show', as: 'order'
   get '/orders', to: 'orders#index'
-  get '/restaurants/:id/reviews', to: 'restaurants#restaurant_reviews'
+  get '/restaurants/:id/reviews', to: 'restaurants#restaurant_reviews', as: 'restaurant_reviews'
+  get '/users/:id/orders', to: 'users#orders', as: 'user_orders'
+  get '/users/:id/reviews', to: 'users#reviews', as: 'user_reviews'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

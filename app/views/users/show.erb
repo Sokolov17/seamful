@@ -1,10 +1,15 @@
-<h1><%= @user.first_name%> <%=@user.last_name  %></h1>
+<h1><%= @user.fullname %></h1>
 
+<%= link_to "Order History", user_orders_path %>
+<br>
+<%= link_to "See all reviews", user_reviews_path %>
+
+<br>
+<br>
+<br>
 <p>
   <%= @user.email %><br>
   <%= @user.password %><br>
-
-  <br></br>
 
   <%= @user.first_name %><br>
   <%= @user.last_name %><br>

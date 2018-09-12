@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   has_secure_password
-  has_many :orders
-  has_many :reviews
+  has_many :orders, dependent: :destroy
+  has_many :reviews, dependent: :destroy
   has_many :restaurants, through: :orders
   validates :email, uniqueness: true
   validates :email, presence: true
@@ -10,4 +10,12 @@ class User < ApplicationRecord
     "#{self.first_name} #{self.last_name}"
   end
 
-end
+  def self.num_current_users
+    User.all.count
+  end
+
+  def self.newest
+    last
+  end
+
+end #END USER CLASS

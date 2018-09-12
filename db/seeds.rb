@@ -71,7 +71,7 @@ p "created restaurants"
 end
 p "created users"
 
-10.times do Review.create(restaurant_id: Restaurant.all.sample.id, user_id: User.all.sample.id, rating: rand(1...5), content: Faker::RuPaul.quote)
+70.times do Review.create(restaurant_id: Restaurant.all.sample.id, user_id: User.all.sample.id, rating: rand(1...5), content: Faker::RuPaul.quote)
 end
 p "created reviews"
 
@@ -148,11 +148,11 @@ puts "Mains"
   description: "Soda", category: "Drinks")
   puts " end drinks"
 
-20.times do Order.create(restaurant_id: Restaurant.all.sample.id, user_id: User.all.sample.id)
+100.times do Order.create(restaurant_id: Restaurant.all.sample.id, user_id: User.all.sample.id)
 end
 p "created orders"
 
-20.times do Menuorder.create(order_id: Order.all.sample.id, food_item_id: FoodItem.all.sample.id)
+200.times do Menuorder.create(order_id: Order.all.sample.id, food_item_id: FoodItem.all.sample.id)
 end
 
 p "created menuorder"

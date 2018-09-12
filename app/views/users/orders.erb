@@ -1,0 +1,7 @@
+<h1> <%= @user.fullname %>'s Orders </h1>
+
+<%@orders.each do |order|  %>
+<br><%= link_to order.restaurant.name, order_path(order) %>
+  <li><%= order.created_at %></li>
+
+  <% end %>
