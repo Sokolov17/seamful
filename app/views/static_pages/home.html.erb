@@ -1,21 +1,3 @@
-<!-- <div class="home">
-  <div class="full-hero hero-home">
-    <h3> Welcome </h3>
-    <div class="home-options">
-      <ul>
-        <li class="btn btn-success">
-          Become a Member
-        </li>
-        <li class="btn btn-info">
-          Existing User
-        </li>
-      </ul>
-  </div>
-
-  </div>
-</div> -->
-
-
 <div class="home">
   <div class="flex-container">
       <div>
@@ -24,12 +6,15 @@
   </div>
 
   <div class="flex-container two" style="margin: -2vh 0 0 0;">
-    <div class="btn btn-success">
-      Become A Member
+    <div>
+      <%=link_to "Become A Member", new_user_path, class: "btn btn-success"%>
     </div>
-
-    <div class="btn btn-info">
-      Existing Customer
+    <div>
+      <% if session[:user_id] == nil %>
+        <%= link_to "Existing Customer", login_path, class: "btn btn-info" %>
+      <% else %>
+        <%= link_to "Existing Customer", restaurants_path, class: "btn btn-info" %>
+      <% end %>
     </div>
 </div>
 </div>

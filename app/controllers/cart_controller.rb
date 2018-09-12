@@ -11,12 +11,11 @@ class CartController < ApplicationController
       if value != ""
         value = value.to_i
         value.times do
-          cart << key
+          add_to_cart(key)
         end
       end
     end
     redirect_to cart_path
-
   end
 
 end
