@@ -63,6 +63,14 @@ rest_8 = Restaurant.create(name: "Ofrenda",
                           phone_num: "212-924-2305",
                           cuisine: "Mexican",
                           price_range: "$$")
+rest_9 = Restaurant.create(name: "Ofrenda",
+                          street_name: "113 7th Avenue South",
+                          city_name: "New York",
+                          zipcode: "10014",
+                          state: "NY",
+                          phone_num: "212-924-2305",
+                          cuisine: "Mexican",
+                          price_range: "$$")
 
 p "created restaurants"
 

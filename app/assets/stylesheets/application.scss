@@ -21,6 +21,9 @@
   font-size: 2em;
 }
 
+body {
+  padding-left: 20px;
+}
 
 .navbar {
   border-bottom: 5px solid rgb(215,248,212);
@@ -183,8 +186,4 @@ span.nav-pad {
   font-size: 2em;
   float: right;
   display: inline;
-}
-
-body {
-  padding-left: 20px;
 }
