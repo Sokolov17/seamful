@@ -23,7 +23,13 @@
 
 body {
   padding-left: 20px;
+<<<<<<< HEAD
 }
+=======
+
+}
+
+>>>>>>> e56b74ba492fa91092bc3e712fd9fc1ac14ade10
 
 .navbar {
   border-bottom: 5px solid rgb(215,248,212);
@@ -187,3 +193,26 @@ span.nav-pad {
   float: right;
   display: inline;
 }
+
+
+.cuisine-select {
+    display: grid;
+    grid-gap: 18px;
+    grid-template-rows: 200px 200px 200px;
+    grid-template-columns: 200px 200px 200px;
+    justify-content: center;
+}
+.cuisine {
+  display: flex;
+  img {
+    width: 200px;
+    height: 200px;
+  }
+}
+.guide {
+    font-family: 'Pacifico', cursive;
+    color: rgb(135,206,250);
+    font-size: 2em;
+    text-align: center;
+    font-size: 5
+  }
