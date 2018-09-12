@@ -18,6 +18,11 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.first_name = user_params[:first_name].titleize
+    @user.last_name = user_params[:last_name].titleize
+    @user.street_name = user_params[:street_name].titleize
+    @user.city_name = user_params[:city_name].titleize
+    @user.state = user_params[:state].titleize
     if @user.save
       session[:user_id] = @user.id
       flash[:notice] = "Welcome to Seamful, homie!"

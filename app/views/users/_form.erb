@@ -2,7 +2,7 @@
 
   <ol>
       <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+        <strong><%= msg %></strong><br>
       <% end %>
     </ol>
 
@@ -13,16 +13,18 @@
   <%= f.label :first_name %>
   <%= f.text_field :first_name %><br>
   <%= f.label :last_name %>
-  <%= f.text_field :last_name %><br>
-  <%= f.label :street_name %>
+  <%= f.text_field :last_name%><br>
+  <%= f.label :street_name, "Address"%>
   <%= f.text_field :street_name %><br>
-  <%= f.label :city_name %>
+  <%= f.label :city_name, "City" %>
   <%= f.text_field :city_name%><br>
-  <%= f.label :zipcode %>
+  <%= f.label :state, "State" %>
+  <%= f.text_field :state%><br>
+  <%= f.label :zipcode, "ZIP Code" %>
   <%= f.text_field :zipcode%><br>
-  <%= f.label "Phone number" %>
+  <%= f.label :phone_num, "Phone" %>
   <%= f.telephone_field :phone_num %><br>
-  <%= f.label "Credit card number" %>
+  <%= f.label :credit_card_num, "Credit Card Number" %>
   <%= f.text_field :credit_card_num %><br>
 
 <br></br>
