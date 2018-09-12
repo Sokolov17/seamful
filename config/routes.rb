@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :food_items
   resources :restaurants
   resources :users
+  get '/guide', to: 'static_pages#guide', as: 'guide'
   get '/about', to: 'static_pages#about', as: 'about'
   get '/contact', to: 'static_pages#contact', as: 'contact'
   get '/cart', to: 'cart#show', as: 'cart'
@@ -19,6 +20,16 @@ Rails.application.routes.draw do
   get '/restaurants/:id/reviews', to: 'restaurants#restaurant_reviews', as: 'restaurant_reviews'
   get '/users/:id/orders', to: 'users#orders', as: 'user_orders'
   get '/users/:id/reviews', to: 'users#reviews', as: 'user_reviews'
+  get 'guide/bagels', to: 'guides#bagels', as: 'bagel'
+  get 'guide/chinese', to: 'guides#chinese', as: 'chinese'
+  get 'guide/fusion', to: 'guides#fusion', as: 'fusion'
+  get 'guide/greek', to: 'guides#greek', as: 'greek'
+  get 'guide/health', to: 'guides#health', as: 'health'
+  get 'guide/italian', to: 'guides#italian', as: 'italian'
+  get 'guide/mexican', to: 'guides#mexican', as: 'mexican'
+  get 'guide/american', to: 'guides#american', as: 'american'
+  get 'guide/thai', to: 'guides#thai', as: 'thai'
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
