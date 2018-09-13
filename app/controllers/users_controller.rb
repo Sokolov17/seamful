@@ -53,6 +53,7 @@ class UsersController < ApplicationController
   def destroy
     if current_user.id == @user.id
       @user.destroy
+      session.destroy
       flash[:notice] = "Account for #{@user.first_name} deleted."
       redirect_to home_path
     else

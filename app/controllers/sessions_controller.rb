@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       init_cart
       flash[:notice] = "Login Successful"
-      redirect_to restaurants_path
+      redirect_to guide_path
     else
       flash[:notice] = "Invalid username or password"
       redirect_to login_path

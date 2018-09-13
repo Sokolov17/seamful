@@ -1,32 +1,26 @@
+
+
+
 <%= form_for @user do |f| %>
 
-  <ol>
-      <% @user.errors.full_messages.each do |msg| %>
-        <strong><%= msg %></strong><br>
-      <% end %>
-    </ol>
+ <ol>
+     <% @user.errors.full_messages.each do |msg| %>
+       <strong><%= msg %></strong><br>
+     <% end %>
+   </ol>
+ <div style="margin: 0 0 15px 2px"><%= f.text_field :first_name, placeholder: "First Name" ,size: 15%><text> </text>
+<%= f.text_field :last_name,placeholder: "Last Name", size: 16 %></div>
+<div> <%= f.text_field :email,placeholder: "Email",size: 33 %> </div>
+<div>  <%= f.password_field :password,placeholder: "Password",size: 33 %></div>
+<div>  <%= f.text_field :street_name ,placeholder: "Street Name",size: 33%></div>
+<div>  <%= f.text_field :city_name, placeholder: "City Name",size: 33, height: 10 %> </div>
+<div>  <%= f.text_field :state, placeholder: "State",size: 15%>
+ <%= f.text_field :zipcode, placeholder: "Zipcode",size: 16%></div>
+<div>  <%= f.telephone_field :phone_num, placeholder: "Phone Number",size: 33 %></div>
+<div>  <%= f.text_field :credit_card_num, placeholder: "Credit Card Number",size: 33 %></div>
 
-  <%= f.label :email %>
-  <%= f.text_field :email %><br>
-  <%= f.label :password %>
-  <%= f.password_field :password %><br>
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %><br>
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name%><br>
-  <%= f.label :street_name, "Address"%>
-  <%= f.text_field :street_name %><br>
-  <%= f.label :city_name, "City" %>
-  <%= f.text_field :city_name%><br>
-  <%= f.label :state, "State" %>
-  <%= f.text_field :state%><br>
-  <%= f.label :zipcode, "ZIP Code" %>
-  <%= f.text_field :zipcode%><br>
-  <%= f.label :phone_num, "Phone" %>
-  <%= f.telephone_field :phone_num %><br>
-  <%= f.label :credit_card_num, "Credit Card Number" %>
-  <%= f.text_field :credit_card_num %><br>
+<br>
+ <%= f.submit class: "btn btn-success"%>
+ <% end %>
 
-<br></br>
-  <%= f.submit %>
-  <% end %>
+</div>

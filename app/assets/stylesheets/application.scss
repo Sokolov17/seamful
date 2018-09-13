@@ -114,7 +114,6 @@ span.nav-pad {
   height: 50px;
   margin-top: 5px;
   background-color: rgb(245,245,245);
-  border-top: 1px solid black;
 }
 
 .footer-info {
@@ -204,8 +203,112 @@ span.nav-pad {
 }
 .guide {
     font-family: 'Pacifico', cursive;
-    color: rgb(135,206,250);
+    color: #94c5d1;
     font-size: 2em;
     text-align: center;
     font-size: 5
+  }
+
+
+  // <!-- Login In Page ---->
+
+
+
+
+  .login h1{
+  margin: 155px 0 0 0;
+  }
+
+  .login1{
+  margin: 20px;
+  border-radius: 2px;
+  }
+
+  .login{
+  height: 80vh;
+  width: auto;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  background: #C6FFDD;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  // <!--- Create Account -->
+  .account1 div{
+  margin: 0 0 10px 0;
+  }
+
+
+  .account1{
+  overflow: auto;
+  height: 60vh;
+  margin: 20px 0 0 0 ;
+  border-radius: 2px;
+  position: relative;
+  }
+
+  .account2 {
+    position: absolute;
+  }
+
+  .account h1{
+  margin: 40px 0 0 0 ;
+  overflow: auto;
+  }
+
+  .account{
+  height: 80vh;
+  width: auto;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  background: #C6FFDD;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+  //users info page
+  .info p{
+   font-size: 24px;
+  }
+
+  .link-to-text-color{
+   color: rgb(244,136,110);
+  }
+
+  // user page
+
+
+
+
+  .user h1{
+  margin: 155px 0 0 0;
+  }
+
+  .info{
+  margin: 20px 0 0 0;
+  border-radius: 2px;
+  }
+
+  .user{
+  height: 100vh;
+  width: auto;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  background: #C6FFDD;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .user p {
+   color: white;
+  }
+
+  .link{
+   font-size: 3px;
+  }
+
+  .button1{
+   margin: 0 10px 50px 10px;
+   top: 15%;
   }

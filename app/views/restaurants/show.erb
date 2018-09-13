@@ -1,8 +1,8 @@
 <h4><%= @restaurant.name %></h4>
-<p> <%= @restaurant.avg_rating%> </p>
-<p><%= @restaurant.street_name %></p>
-<p><%= @restaurant.city_name %>, <%= @restaurant.state %> <%= @restaurant.zipcode %></p>
-<p><%= @restaurant.phone_num %></p>
+<%= @restaurant.avg_rating%><br>
+<%= @restaurant.street_name %><br>
+<%= @restaurant.city_name %>, <%= @restaurant.state %> <%= @restaurant.zipcode %><br>
+<%= @restaurant.phone_num %><br>
 <br>
 <%= link_to "See all reviews", restaurant_reviews_path %>
 <br>
@@ -12,59 +12,85 @@
 <%= form_tag edit_cart_path, method: :patch do  %>
 <input name="restaurant_id" value="<%= @restaurant.id %>" type="hidden" />
 
-<h5>Drinks</h5>
+<br>
 <div class="container">
-  <div class="row">
-  <% @restaurant.menu_category("Drinks").each do |item| %>
-    <div class="col-md-6 food-border">
-      <h6><%= item.food_name %><h6>
-        <p class="price"> $<%= item.price %></p>
-        <p class="description"><em><%= item.description %></em><p>
-          Quantity: <input type="number" name="items[<%= item.id %>]">
-    </div>
-  <% end %>
-  <div.clearfix:after>
-  <div.empty-fill>
+
+  <h5>Drinks</h5>
+  <div class="container">
+    <div class="row">
+      <% if @restaurant.menu_category("Drinks") == []%>
+        <p>There are no drinks for this menu.</p>
+      <% else %>
+      <% @restaurant.menu_category("Drinks").each do |item| %>
+      <div class="col-md-6 food-border">
+        <h6><%= item.food_name %><h6>
+          <p class="price"> $<%= item.price %></p>
+          <p class="description"><em><%= item.description %></em><p>
+            Quantity: <input type="number" name="items[<%= item.id %>]">
+      </div>
+      <% end %>
+    <% end %>
+  <!-- <div.empty-fill></div> -->
+    <!-- <div.clearfix:after></div> -->
+</div>
+</div>
+
+
+
 <h5>Appetizers</h5>
 <div class="container">
   <div class="row">
-  <% @restaurant.menu_category("Appetizers").each do |item| %>
+    <% if @restaurant.menu_category("Appetizers") == []%>
+      <p>There are no appetizers for this menu.</p>
+    <% else %>
+    <% @restaurant.menu_category("Appetizers").each do |item| %>
     <div class="col-md-6 food-border">
       <h6><%= item.food_name %><h6>
         <p class="price"> $<%= item.price %></p>
         <p class="description"><em><%= item.description %></em><p>
           Quantity: <input type="number" name="items[<%= item.id %>]">
     </div>
+    <% end %>
   <% end %>
-  <div.clearfix:after>
-  <div.empty-fill>
+  </div>
+</div>
+
+
 <h5>Mains</h5>
 <div class="container">
   <div class="row">
-  <% @restaurant.menu_category("Mains").each do |item| %>
+    <% if @restaurant.menu_category("Mains") == []%>
+      <p>There are no main dishes for this menu.</p>
+    <% else %>
+    <% @restaurant.menu_category("Mains").each do |item| %>
     <div class="col-md-6 food-border">
       <h6><%= item.food_name %><h6>
         <p class="price"> $<%= item.price %></p>
         <p class="description"><em><%= item.description %></em><p>
           Quantity: <input type="number" name="items[<%= item.id %>]">
     </div>
+    <% end %>
   <% end %>
-  <div.clearfix:after>
-  <div.empty-fill>
+  </div>
+</div>
+
 <h5>Desserts</h5>
 <div class="container">
   <div class="row">
-  <% @restaurant.menu_category("Desserts").each do |item| %>
+    <% if @restaurant.menu_category("Desserts") == []%>
+    <p>There are no desserts for this menu.</p>
+    <% else %>
+    <% @restaurant.menu_category("Desserts").each do |item| %>
     <div class="col-md-6 food-border">
       <h6><%= item.food_name %><h6>
         <p class="price"> $<%= item.price %></p>
         <p class="description"><em><%= item.description %></em><p>
           Quantity: <input type="number" name="items[<%= item.id %>]">
     </div>
+    <% end %>
   <% end %>
-  <div.clearfix:after>
-  <div.empty-fill>
-
-<br></br>
+  </div>
+</div>
+<br>
 <%= submit_tag "Add to Cart", class: "btn btn-primary" %>
 <% end %>
