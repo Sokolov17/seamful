@@ -4,9 +4,9 @@
 <%= @restaurant.city_name %>, <%= @restaurant.state %> <%= @restaurant.zipcode %><br>
 <%= @restaurant.phone_num %><br>
 <br>
-<%= link_to "See all reviews", restaurant_reviews_path %>
+<%= link_to "See all reviews", restaurant_reviews_path, class: 'link-to-text-color' %>
 <br>
-<%= link_to "Write a Review", new_review_path %>
+<%= link_to "Write a Review", new_review_path, class: 'link-to-text-color' %>
 
 
 <%= form_tag edit_cart_path, method: :patch do  %>
@@ -19,7 +19,7 @@
   <div class="container">
     <div class="row">
       <% if @restaurant.menu_category("Drinks") == []%>
-        <p>There are no drinks for this menu.</p>
+        <p class="unavailable">There are no drinks for this menu.</p>
       <% else %>
       <% @restaurant.menu_category("Drinks").each do |item| %>
       <div class="col-md-6 food-border">
@@ -30,8 +30,6 @@
       </div>
       <% end %>
     <% end %>
-  <!-- <div.empty-fill></div> -->
-    <!-- <div.clearfix:after></div> -->
 </div>
 </div>
 
