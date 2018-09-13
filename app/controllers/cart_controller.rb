@@ -4,6 +4,10 @@ class CartController < ApplicationController
     @food_items = cart.map do |item|
       FoodItem.find(item)
     end
+    @total = 0
+    @food_items.each do |item|
+      @total += item.price
+    end
   end
 
   def update

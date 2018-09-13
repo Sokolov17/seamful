@@ -23,7 +23,6 @@ Rails.application.routes.draw do
   get '/users/:id/reviews', to: 'users#reviews', as: 'user_reviews'
   get 'guide/bagels', to: 'guides#bagels', as: 'bagel'
   get 'guide/chinese', to: 'guides#chinese', as: 'chinese'
-  get 'guide/fusion', to: 'guides#fusion', as: 'fusion'
   get 'guide/greek', to: 'guides#greek', as: 'greek'
   get 'guide/health', to: 'guides#health', as: 'health'
   get 'guide/italian', to: 'guides#italian', as: 'italian'

@@ -14,10 +14,8 @@
 
   <body>
     <%= render 'layouts/header' %>
-    <div class="body-text">
     <h4> <%= flash[:notice] %> </h4>
     <%= yield %>
-    </div>
     <%= render 'layouts/footer' %>
   </body>
 </html>

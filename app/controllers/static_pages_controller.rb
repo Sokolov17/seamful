@@ -12,4 +12,8 @@ class StaticPagesController < ApplicationController
   def guide
   end
 
+  def analytics
+    render :layout => 'indices'
+  end  
+
 end

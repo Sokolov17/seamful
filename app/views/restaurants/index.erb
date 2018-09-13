@@ -3,7 +3,7 @@
 
 <ul>
   <% @restaurants.each do |restaurant| %>
-  <li class="list-group-item"><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+  <li class="list-group-item"><%= link_to restaurant.name, restaurant_path(restaurant), class:'link-to-text-color' %></li>
   <% end %>
 </ul>
 <br>

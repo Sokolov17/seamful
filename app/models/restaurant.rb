@@ -17,6 +17,36 @@ class Restaurant < ApplicationRecord
     end
   end
 
+  def stars
+    rating = self.get_avg #3.6
+    whole_star = '<i class="fas fa-star"></i>'
+    half_star = '<i class="fas fa-star-half"></i>'
+    stars = ""
+    # whole_stars = (rating / 1).floor
+    # half_star = 0
+    # decimal_stars = rating % 1 # .6
+    #
+    # if decimal_stars >= 0.8
+    #   whole_stars += 1
+    # elsif decimal_stars >= 0.3
+    #   half_star = 1
+    # end
+
+    until rating < 1
+      stars << whole_star
+      rating -= 1
+    end
+
+    if rating <= 0.8
+      stars << whole_star
+    else
+      stars << half_star
+    end
+
+    stars
+
+  end
+
   def avg_rating
     if self.reviews.sum(:rating) != 0
       avg = (self.reviews.sum(:rating).to_f/self.reviews.count).round(2)

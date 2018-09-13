@@ -1,5 +1,10 @@
 <h4><%= @restaurant.name %></h4>
-<%= @restaurant.avg_rating%><br>
+<% @restaurant.get_avg.round.times do %><i class="fas fa-star"></i><%end%>
+<% if @restaurant.get_avg%1 <= 0.8 && @restaurant.get_avg%1 >=0.3%>
+<i class="fas fa-star-half"></i>
+  <% else %>
+  <i class="fas fa-star"></i>
+  <% end %><br>
 <%= @restaurant.street_name %><br>
 <%= @restaurant.city_name %>, <%= @restaurant.state %> <%= @restaurant.zipcode %><br>
 <%= @restaurant.phone_num %><br>
@@ -39,7 +44,7 @@
 <div class="container">
   <div class="row">
     <% if @restaurant.menu_category("Appetizers") == []%>
-      <p>There are no appetizers for this menu.</p>
+      <p class="unavailable">There are no appetizers for this menu.</p>
     <% else %>
     <% @restaurant.menu_category("Appetizers").each do |item| %>
     <div class="col-md-6 food-border">
@@ -58,7 +63,7 @@
 <div class="container">
   <div class="row">
     <% if @restaurant.menu_category("Mains") == []%>
-      <p>There are no main dishes for this menu.</p>
+      <p class="unavailable">There are no main dishes for this menu.</p>
     <% else %>
     <% @restaurant.menu_category("Mains").each do |item| %>
     <div class="col-md-6 food-border">
@@ -76,7 +81,7 @@
 <div class="container">
   <div class="row">
     <% if @restaurant.menu_category("Desserts") == []%>
-    <p>There are no desserts for this menu.</p>
+    <p class="unavailable">There are no desserts for this menu.</p>
     <% else %>
     <% @restaurant.menu_category("Desserts").each do |item| %>
     <div class="col-md-6 food-border">

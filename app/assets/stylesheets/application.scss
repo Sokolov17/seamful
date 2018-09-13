@@ -151,7 +151,7 @@ span.nav-pad {
 }
 
 .unavailable {
-  font-size: 1em;
+  font-size: 0.7em;
 }
 
 .column-in-center{
@@ -225,6 +225,7 @@ span.nav-pad {
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
+    min-height: 500px;
   }
 
 
@@ -356,4 +357,26 @@ hr{
      border: .5px solid white;
   }
   .notice{
+  }
+
+.review {
+  width: 50%;
+  padding: 5px;
+  margin: 5px;
+  box-shadow: 10px 10px 5px grey;
+  margin: 10px 10px;
+  border-radius: 8px;
+  background-color: rgba(233,233,233,0.7);
+  h6 {
+    display: inline;
+  }
+}
+
+.order{
+       border: 1px solid #dadada;
+       margin: 0 250px 0 250px;
+  }
+  .cart-line{
+    border: 1px solid #dadada;
+    margin: 0 250px 0 200px;
   }

@@ -1,7 +1,7 @@
 
 <h1> <%= @review.restaurant.name %> Review </h1>
 
-<h5>Rating: <%= @review.rating %> Stars</h5>
+<h5>Rating: <% @review.rating.times do %>⭐️<%end%></h5>
 <p>Reviewer: <%= @review.user.fullname %></p>
 <p>Date: <%= @review.created_at.strftime("%b %d %Y")  %></p>
 <p><%= @review.content %></p>
