@@ -1,24 +1,33 @@
-<div id="cart">
-  <div class="flex-container">
-
-<h1 style="margin: 50px 0 50px 0;font-family: 'Montserrat'; text-transform:uppercase; font-size: 45px"><b>Your Cart<b></h1>
-
+<br><div class="flex-container" >
+    <h1 style="margin: 0 0 30px 0;font-family: 'Montserrat'; font-weight: bold; text-transform:uppercase; font-size: 32px;letter-spacing: 3px;"><b>Your Cart</b></h1>
 </div>
-<hr class="cart-line">
+<hr class="order">
+
+<hr class="order">
+<div class="row">
+  <div class="column">
     <% @food_items.each do |item| %>
-    <div class="flex-container">
-      <p style="margin: 0 45% 0 0; font-family: 'Montserrat'; text-transform:uppercase; font-size: 24px;"><strong><%= item.food_name %></strong></p>
-      <p class="price-right"style="margin: 0 20% 0 0; font-family: 'Montserrat'; text-transform:uppercase; font-size: 24px;">$<%= item.price %>
-
-    </div>
-    <hr class="cart-line">
-    <% end %>
-
-    <hr>
-
-    <p style="color:#777">Total: </p><p style="margin: 0 0 30px 70px; font-family: 'Montserrat'; text-transform:uppercase; font-size: 24px;">$<%=@total %></p>
-    <%= button_to "Submit Order", orders_path, class: "btn btn-info"%>
-
+      <div><%= item.food_name %></div>
+    <%end%>
   </div>
 
+  <div class="column2">
+    <% @food_items.each do |item| %>
+      <div> $<%= item.price %></div>
+    <%end%>
+  </div>
 </div>
+
+
+<div class="row2">
+  <hr class="order">
+  <div class="column3">
+    <div>Total</div>
+  </div>
+  <div class="column4">
+      <div>$<%=@total %><%= button_to "Submit Order", orders_path, class: "btn btn-info"%></div>
+  </div>
+
+
+
+ </div>

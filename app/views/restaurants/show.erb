@@ -8,7 +8,6 @@
 <%= @restaurant.street_name %><br>
 <%= @restaurant.city_name %>, <%= @restaurant.state %> <%= @restaurant.zipcode %><br>
 <%= @restaurant.phone_num %><br>
-<br>
 <%= link_to "See all reviews", restaurant_reviews_path, class: 'link-to-text-color' %>
 <br>
 <%= link_to "Write a Review", new_review_path, class: 'link-to-text-color' %>
@@ -31,7 +30,7 @@
         <h6><%= item.food_name %><h6>
           <p class="price"> $<%= item.price %></p>
           <p class="description"><em><%= item.description %></em><p>
-            Quantity: <input type="number" name="items[<%= item.id %>]">
+            Quantity: <input type="number" name="items[<%= item.id %>]" min="0" step="1">
       </div>
       <% end %>
     <% end %>
@@ -51,7 +50,7 @@
       <h6><%= item.food_name %><h6>
         <p class="price"> $<%= item.price %></p>
         <p class="description"><em><%= item.description %></em><p>
-          Quantity: <input type="number" name="items[<%= item.id %>]">
+          Quantity: <input type="number" name="items[<%= item.id %>]" min="0" step="1">
     </div>
     <% end %>
   <% end %>
@@ -70,7 +69,7 @@
       <h6><%= item.food_name %><h6>
         <p class="price"> $<%= item.price %></p>
         <p class="description"><em><%= item.description %></em><p>
-          Quantity: <input type="number" name="items[<%= item.id %>]">
+          Quantity: <input type="number" name="items[<%= item.id %>]" min="0" step="1">
     </div>
     <% end %>
   <% end %>
@@ -88,12 +87,12 @@
       <h6><%= item.food_name %><h6>
         <p class="price"> $<%= item.price %></p>
         <p class="description"><em><%= item.description %></em><p>
-          Quantity: <input type="number" name="items[<%= item.id %>]">
+          Quantity: <input type="number" name="items[<%= item.id %>]" min="0" step="1">
     </div>
     <% end %>
   <% end %>
   </div>
 </div>
 <br>
-<%= submit_tag "Add to Cart", class: "btn btn-primary" %>
+<div ALIGN=CENTER><%= submit_tag "Add to Cart", class: "btn btn-primary" %></div>
 <% end %>

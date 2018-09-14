@@ -1,6 +1,16 @@
 <h1>Reviews for <%= @restaurant.name %></h1>
 
-<% @reviews.each do |review| %>
-  <br><strong> <%= link_to review.user.first_name, review_path(review) %> </strong>
-  <li>Rating: <%= review.rating %></li>
+<div class=amazing-reviews>
+  <% @reviews.each do |review| %>
+  <blockquote>
+    <header>
+      <span data-rating=5>
+        <% review.rating.times do |rating| %>⭐️<% end %>
+      </span>
+      <span>, <%= review.created_at.strftime("%B %d %Y") %></span>
+      <span>By <em><%= review.user.fullname %></em></span>
+    </header>
+    <p><%= review.content %></p>
+  </blockquote>
   <% end %>
+</div>
