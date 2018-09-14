@@ -17,7 +17,7 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.user_id = session[:user_id]
     if @review.save
-      redirect_to reviews_path #redirect to User's review path if logged in
+      redirect_to restaurant_reviews_path(params[:review][:restaurant_id])
     else
       render :new
     end

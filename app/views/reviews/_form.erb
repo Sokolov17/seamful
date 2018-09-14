@@ -1,4 +1,11 @@
 <%= form_for @review do |f| %>
+
+<ol>
+     <% @review.errors.full_messages.each do |msg| %>
+       <strong><%= msg %></strong><br>
+     <% end %>
+</ol>
+
   <%= f.label :restaurant_id %><br>
   <%= f.collection_select :restaurant_id, Restaurant.all, :id, :name %><br></br>
   <%= f.label :rating %><br>

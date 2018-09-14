@@ -2,7 +2,7 @@ class RestaurantsController < ApplicationController
   before_action :set_restaurant, only: [:show, :edit, :update, :restaurant_reviews]
 
   def index
-    @restaurants = Restaurant.all
+    @restaurants = Restaurant.all.sort_by{|restaurant| restaurant.name }
   end
 
   def show

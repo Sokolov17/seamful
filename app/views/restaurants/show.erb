@@ -1,16 +1,20 @@
+<%= link_to "Back", guide_path, class: 'link-to-text-color' %>
+<br>
+<br>
 <h4><%= @restaurant.name %></h4>
-<% @restaurant.get_avg.round.times do %><i class="fas fa-star"></i><%end%>
-<% if @restaurant.get_avg%1 <= 0.8 && @restaurant.get_avg%1 >=0.3%>
-<i class="fas fa-star-half"></i>
-  <% else %>
-  <i class="fas fa-star"></i>
-  <% end %><br>
+<% @restaurant.get_avg.floor.times do %><i class="fas fa-star"></i><%end%>
+<%if @restaurant.get_avg%1 <= 0.8 && @restaurant.get_avg%1 >=0.3%>
+  <i class="fas fa-star-half"></i>
+  <% elsif @restaurant.get_avg%1 >0.8 %>
+    <i class="fas fa-star"></i>
+  <% end %>(<%= @restaurant.get_avg %>)<br>
 <%= @restaurant.street_name %><br>
 <%= @restaurant.city_name %>, <%= @restaurant.state %> <%= @restaurant.zipcode %><br>
 <%= @restaurant.phone_num %><br>
 <%= link_to "See all reviews", restaurant_reviews_path, class: 'link-to-text-color' %>
 <br>
 <%= link_to "Write a Review", new_review_path, class: 'link-to-text-color' %>
+
 
 
 <%= form_tag edit_cart_path, method: :patch do  %>
