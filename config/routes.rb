@@ -30,6 +30,4 @@ Rails.application.routes.draw do
   get 'guide/american', to: 'guides#american', as: 'american'
   get 'guide/thai', to: 'guides#thai', as: 'thai'
 
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

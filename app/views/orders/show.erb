@@ -1,40 +1,37 @@
-<h3 style="padding: 35px 35px 0 35px; font-family: 'Montserrat'; text-transform:uppercase; font-size: 16px"><b>Order#</b><%= @order.id %></h3>
-
-<p style="padding: 0 35px 0 35px; font-family: 'Montserrat'; text-transform:uppercase; font-size: 16px"><b>Date</b> <%= @order.created_at %> </p><br><br>
-
+<p style="padding: 1% 0 0 3%; font-family: 'Montserrat'; text-transform:uppercase; font-size: 20px;letter-spacing: 3px;"><b>Order#</b> <text style="font-size: 18px;letter-spacing: 0px;"><%= @order.id %></text></p>
+<p style="padding: 0 0 0 3%; font-family: 'Montserrat'; text-transform:uppercase; font-size: 20px;letter-spacing: 3px;"><b>Date</b> <text style="font-size: 18px;letter-spacing: 0px;"><%= @order.created_at.strftime("%B %d %Y") %> </text></p><br>
 
 <div class="flex-container" >
-    <h1 style="margin: 0 0 30px 0;font-family: 'Montserrat'; text-transform:uppercase; font-size: 30px"><b>Your Order</b></h1>
+    <h1 style="margin: 0 0 30px 0;font-family: 'Montserrat'; text-transform:uppercase; font-size: 32px;letter-spacing: 3px;"><b>Your Order</b></h1>
 </div>
-<hr class="order">
-
 
 <hr class="order">
 <div class="flex-container" >
-  <h1 style="margin: 30px 0 30px 0;font-family: 'Montserrat'; text-transform:uppercase; font-size: 20px;"><b><%= @order.restaurant.name %><b> </h1>
+  <h1 style="margin: 30px 0 30px 0; font-family: 'Montserrat'; text-transform:uppercase; font-size: 25px;letter-spacing: 3px;"><%= @order.restaurant.name %> </h1>
 
 </div>
 <hr class="order">
-
-
 <div class="row">
-<div class="column" style="margin: 0 0 0 40px">
-  <% @order.menuorders.each do |menuorder| %>
-    <p><%= menuorder.food_item.food_name %></p><br>
-  <% end %>
+  <div class="column">
+    <% @order.menuorders.each do |menuorder| %>
+      <div><%= menuorder.food_item.food_name %></div>
+    <%end%>
+  </div>
+
+  <div class="column2">
+    <% @order.menuorders.each do |menuorder| %>
+      <div> $<%= menuorder.food_item.price %></div>
+    <%end%>
+  </div>
 </div>
-</div>
-<% @order.menuorders.each do |menuorder| %>
- <div class="flex-container" style="margin: 30px 0  0 0; font-family: 'Montserrat'; text-transform:uppercase; font-size: 16px;" >
-    <%= menuorder.food_item.food_name %>
-        <p style="margin: 0 0 30px 242px; font-family: 'Montserrat'; text-transform:uppercase; font-size: 16px;"> $<%= menuorder.food_item.price %><p>
 
-    </div>
-    <% end %>
-<hr class="order">
-<div class="flex-container" style="margin:15px  0 130px 300px; padding: 20px 0 0 0;font-family: 'Montserrat'; text-transform:uppercase; font-size: 24px;">
-    <p style="color:#777">Total</p>
 
-<p style="margin: 0 0 30px 70px; font-family: 'Montserrat'; text-transform:uppercase; font-size: 24px;">$<%=@order.total %></p>
-
+<div class="row2">
+  <hr class="order">
+  <div class="column3">
+    <div>Total</div>
+  </div>
+  <div class="column4">
+      <div>$<%=@order.total %></div>
+  </div>
 </div>
