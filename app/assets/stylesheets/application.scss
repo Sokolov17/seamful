@@ -207,6 +207,10 @@ span.nav-pad {
     width: 200px;
     height: 200px;
   }
+  img:hover {
+    webkit-filter: blur(2px);
+    filter: blur(2px);
+  }
 }
 .guide {
     font-family: 'Pacifico', cursive;
