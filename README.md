@@ -3,7 +3,7 @@
 
 ![seamless demo](https://github.com/madtab7/seamful/blob/master/public/demo/seamful.gif)
 
-[Demo Video](https://vimeo.com/303956554)
+### [Demo Video](https://vimeo.com/303956554)
 
 ## Installation
 
