@@ -30,7 +30,7 @@ Seamful allows users to order and review nearby restaurants.
 
 ## Built With
 
-* [Ruby on Rails](https://rubyonrails.org/) - Server-side web application framework
+* [Ruby on Rails](https://rubyonrails.org/) - Web application framework
 * [SQLite](https://www.sqlite.org/) - Database for Active Record
 * [Bootstrap](https://getbootstrap.com/) - Front-end framework for styling
 
