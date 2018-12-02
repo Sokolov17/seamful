@@ -32,13 +32,21 @@ rails s
 
 ## Meta
 
-Forrest Benton - [https://github.com/fbenton93](https://github.com/fbenton93)
+Forrest Benton
 
-Arielle Ramirez - [https://github.com/arielleramirez](https://github.com/arielleramirez)
+[https://github.com/fbenton93](https://github.com/fbenton93)
 
-Madeleine Tabing - [https://github.com/madtab7](https://github.com/madtab7)
+Arielle Ramirez
 
-Kristina Tong - [https://github.com/kristinatong](https://github.com/kristinatong)
+[https://github.com/arielleramirez](https://github.com/arielleramirez)
+
+Madeleine Tabing
+
+[https://github.com/madtab7](https://github.com/madtab7)
+
+Kristina Tong
+
+[https://github.com/kristinatong](https://github.com/kristinatong)
 
 
 ## Contributing
