@@ -15,6 +15,8 @@ bundle install
 
 ## Usage example
 
+Seamful allows users to order and review nearby restaurants. 
+
 ## Development setup
 
 ```sh
