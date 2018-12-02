@@ -51,5 +51,3 @@ rails s
 * **Arielle Ramirez** - [arielleramirez](https://github.com/arielleramirez)
 * **Madeleine Tabing** - [madtab7](https://github.com/madtab7)
 * **Kristina Tong** - [kristinatong](https://github.com/kristinatong)
-
-See also the list of [contributors](https://github.com/madtab7/seamful/contributors) who participated in this project.
