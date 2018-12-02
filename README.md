@@ -26,29 +26,11 @@ rails db:migrate
 rails s
 ```
 
-## Release History
+## Built With
 
-* 0.1.0
-    * First official release
-
-## Meta
-
-Forrest Benton
-
-[https://github.com/fbenton93](https://github.com/fbenton93)
-
-Arielle Ramirez
-
-[https://github.com/arielleramirez](https://github.com/arielleramirez)
-
-Madeleine Tabing
-
-[https://github.com/madtab7](https://github.com/madtab7)
-
-Kristina Tong
-
-[https://github.com/kristinatong](https://github.com/kristinatong)
-
+* [Ruby on Rails](https://rubyonrails.org/) - Server-side web application framework
+* [SQLite](https://www.sqlite.org/) - Database for Active Record
+* [Bootstrap](https://getbootstrap.com/) - Front-end framework for styling
 
 ## Contributing
 
@@ -57,3 +39,17 @@ Kristina Tong
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
 5. Create a new Pull Request
+
+## Versioning
+
+* 0.1.0
+    * First official release
+
+## Authors
+
+* **Forrest Benton** - [fbenton93](https://github.com/fbenton93)
+* **Arielle Ramirez** - [arielleramirez](https://github.com/arielleramirez)
+* **Madeleine Tabing** - [madtab7](https://github.com/madtab7)
+* **Kristina Tong** - [kristinatong](https://github.com/kristinatong)
+
+See also the list of [contributors](https://github.com/madtab7/seamful/contributors) who participated in this project.
