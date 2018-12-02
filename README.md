@@ -6,7 +6,9 @@ Seamful is a food delivery service app built on Rails - that allows users to ord
   <a href="https://vimeo.com/303956554"><b>Demo Video</b></a>
 </p>
 
-## Installation
+## Getting Started
+
+### Installation
 
 OS X & Linux:
 
@@ -14,17 +16,17 @@ OS X & Linux:
 bundle install
 ```
 
-## Usage example
-
-Seamful allows users to order and review nearby restaurants.
-
-## Development setup
+### Development setup
 
 ```sh
 rails db:create
 rails db:migrate
 rails s
 ```
+
+## Usage example
+
+Seamful allows users to order and review nearby restaurants.
 
 ## Built With
 
