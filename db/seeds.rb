@@ -101,7 +101,7 @@ FoodItem.create(
   One of the most popular appetizers for ouzo, melting the aromas of the sea in its tender pulp.
   Saganaki shrimp, spicy and juicy, cooked in a rich tomato sauce with feta cheese pieces and hot peppers (for more intense taste) are an irresistible temptation!",
   category: "Appetizers",
-  picture_url: "shrimp_saganaki.jpeg"
+  picture_url: "shrimp_saganaki.jpg"
 )
 
 FoodItem.create(
@@ -110,7 +110,7 @@ FoodItem.create(
   restaurant_id: Restaurant.find_by(name:"Mission Chinese").id,
   description: "Fish rolls",
   category: "Appetizers",
-  picture_url: "Chinese_rolls.jpeg"
+  picture_url: "Chinese_rolls.jpg"
 )
 
 FoodItem.create(
@@ -119,7 +119,7 @@ FoodItem.create(
   restaurant_id: Restaurant.find_by(name:"Black Iron Burger").id,
   description: "fried onion rings",
   category: "Appetizers",
-  picture_url: "onion_rings.jpeg"
+  picture_url: "onion_rings.jpg"
 )
 
 FoodItem.create(
@@ -128,7 +128,7 @@ FoodItem.create(
   restaurant_id: Restaurant.find_by(name:"The Marshall").id,
   description: "fried onion rings",
   category: "Appetizers",
-  picture_url: "onion_rings.jpeg"
+  picture_url: "onion_rings.jpg"
 )
 
 FoodItem.create(
@@ -139,7 +139,7 @@ FoodItem.create(
   It looks neater, you can not use very large plates. 
   And yes, it's more convenient.",
   category: "Appetizers",
-  picture_url: "Carpaccio.jpeg"
+  picture_url: "Carpaccio.jpg"
 )
 
 puts " end Appetizers"
@@ -155,7 +155,7 @@ FoodItem.create(
   When the shepherds returned to the fire and unearthed their prey, it turned out that the meat had become unusually soft. 
   Much tastier than just roasting it.",
   category: "Mains",
-  picture_url: "Kleftiko.jpeg"
+  picture_url: "Kleftiko.jpg"
 )
 
 FoodItem.create(
@@ -164,7 +164,7 @@ FoodItem.create(
   restaurant_id: Restaurant.find_by(name:"L'Artusi").id,
   description: "Prosciutto is usually served at the table as an appetizer or as part of a cold cut before lunch or dinner.",
   category: "Mains",
-  picture_url: "Prosciutto.jpeg"
+  picture_url: "Prosciutto.jpg"
 )
 
 FoodItem.create(
@@ -175,7 +175,7 @@ FoodItem.create(
   you must have at least heard about this sour and spicy soup with lemongrass, galangal and lime leaves. 
   Due to the abundance of spices, the soup has a very specific and memorable taste.",
   category: "Mains",
-  picture_url: "Tom_Yum.jpeg"
+  picture_url: "Tom_Yum.jpg"
 )
 
 FoodItem.create(
@@ -186,7 +186,7 @@ FoodItem.create(
   Once she was mistakenly delivered with wings instead of necks.
   So that the product would not go to waste, she came up with a recipe.",
   category: "Mains",
-  picture_url: "Buffalo_chicken_wings.jpeg"
+  picture_url: "Buffalo_chicken_wings.jpg"
 )
 
 FoodItem.create(
@@ -195,7 +195,7 @@ FoodItem.create(
   restaurant_id: Restaurant.find_by(name:"Black Iron Burger").id,
   description: "Default american dish.",
   category: "Mains",
-  picture_url: "Hamburger.jpeg"
+  picture_url: "Hamburger.jpg"
 )
 
 FoodItem.create(
@@ -204,7 +204,7 @@ FoodItem.create(
   restaurant_id: Restaurant.find_by(name:"Ofrenda").id,
   description: "white fish",
   category: "Mains",
-  picture_url: "Ceviche.jpeg"
+  picture_url: "Ceviche.jpg"
 )
 
 FoodItem.create(
@@ -213,7 +213,7 @@ FoodItem.create(
   restaurant_id: Restaurant.find_by(name:"Sadelle's").id,
   description: "yummy bagel",
   category: "Mains",
-  picture_url: "beigl-s-lososem.jpeg"
+  picture_url: "beigl-s-lososem.jpg"
 )
 
 FoodItem.create(
@@ -222,7 +222,7 @@ FoodItem.create(
   restaurant_id: Restaurant.find_by(name:"Mission Chinese").id,
   description: "A Chinese dish consisting of strips of roast duck served with shredded vegetables and a sweet sauce.",
   category: "Mains",
-  picture_url: "pulled-duck.jpeg"
+  picture_url: "pulled-duck.jpg"
 )
 
 FoodItem.create(
@@ -232,7 +232,7 @@ FoodItem.create(
   description: "Chicken fillet can be fried simply in pieces, 
   but it is much more original and interesting to braid braids from stripes of fillet, and only then fry.",
   category: "Mains",
-  picture_url: "Chicken.jpeg"
+  picture_url: "Chicken.jpg"
 )
 
 FoodItem.create(
@@ -241,7 +241,7 @@ FoodItem.create(
   restaurant_id: Restaurant.find_by(name:"Kiki's").id,
   description: "Penne with spicy tomato sauce",
   category: "Mains",
-  picture_url: "Penne-Arrabbiata.jpeg"
+  picture_url: "Penne-Arrabbiata.jpg"
 )
 
 puts " end mains"
@@ -264,7 +264,7 @@ FoodItem.create(
   restaurant_id: Restaurant.find_by(name:"Sadelle's").id,
   description: "Dark chocolate ganache log w/ crumbled Greek cookies",
   category: "Desserts",
-  picture_url: "Berry-Mascarpone-Bagels.jpeg"
+  picture_url: "Berry-Mascarpone-Bagels.jpg"
 )
 
 FoodItem.create(
@@ -273,7 +273,7 @@ FoodItem.create(
   restaurant_id: Restaurant.find_by(name:"Ofrenda").id,
   description: "Fried bananas in sesame.",
   category: "Desserts",
-  picture_url: "Fried_bananas.jpeg"
+  picture_url: "Fried_bananas.jpg"
 )
 
 FoodItem.create(
@@ -282,7 +282,7 @@ FoodItem.create(
   restaurant_id: Restaurant.find_by(name:"Black Iron Burger").id,
   description: "Dark chocolate cookies",
   category: "Desserts",
-  picture_url: "brownie.jpeg"
+  picture_url: "brownie.jpg"
 )
 
 FoodItem.create(
@@ -292,7 +292,7 @@ FoodItem.create(
   description: "Apple pie is perhaps the most iconic dish in the United States. 
   It appeared on the tables of Americans thanks to immigrants from Great Britain, Sweden and Holland.",
   category: "Desserts",
-  picture_url: "Apple_pie.jpeg"
+  picture_url: "Apple_pie.jpg"
 )
 
 FoodItem.create(
@@ -301,7 +301,7 @@ FoodItem.create(
   restaurant_id: Restaurant.find_by(name:"Somtum Dur").id,
   description: "Khao niew bing - sweet glutinous rice wrapped in banana leaves.",
   category: "Desserts",
-  picture_url: "kha-niew-bing.jpeg"
+  picture_url: "kha-niew-bing.jpg"
 )
 
 FoodItem.create(
@@ -313,7 +313,7 @@ FoodItem.create(
   But when you eat dessert, you dont feel the cereal in it at all, rather, on the contrary!
   It seems that a delicate custard with subtle lemon or orange notes is melting on the tongue.",
   category: "Desserts",
-  picture_url: "Galaktobureko.jpeg"
+  picture_url: "Galaktobureko.jpg"
 )
 
 puts " end desserts"
@@ -325,7 +325,7 @@ FoodItem.create(
   restaurant_id: Restaurant.find_by(name:"Taverna Kyclades").id,
   description: "cold coffee",
   category: "Drinks",
-  picture_url: "kofe-frappe.jpeg"
+  picture_url: "kofe-frappe.jpg"
 )
 
 FoodItem.create(
@@ -334,7 +334,7 @@ FoodItem.create(
   restaurant_id: Restaurant.find_by(name:"Kiki's").id,
   description: "cold coffee",
   category: "Drinks",
-  picture_url: "kofe-frappe.jpeg"
+  picture_url: "kofe-frappe.jpg"
 )
 
 FoodItem.create(
@@ -343,7 +343,7 @@ FoodItem.create(
   restaurant_id: Restaurant.find_by(name:"L'Artusi").id,
   description: "strong drink",
   category: "Drinks",
-  picture_url: "martini.jpeg"
+  picture_url: "martini.jpg"
 )
 
 FoodItem.create(
@@ -352,7 +352,7 @@ FoodItem.create(
   restaurant_id: Restaurant.find_by(name:"Somtum Dur").id,
   description: "just coffee",
   category: "Drinks",
-  picture_url: "cup_of_coffee.jpeg"
+  picture_url: "cup_of_coffee.jpg"
 )
 
 FoodItem.create(
@@ -361,7 +361,7 @@ FoodItem.create(
   restaurant_id: Restaurant.find_by(name:"Sadelle's").id,
   description: "just coffee",
   category: "Drinks",
-  picture_url: "cup_of_coffee.jpeg"
+  picture_url: "cup_of_coffee.jpg"
 )
 
 FoodItem.create(
@@ -370,7 +370,7 @@ FoodItem.create(
   restaurant_id: Restaurant.find_by(name:"by CHLOE").id,
   description: "default sparkling water",
   category: "Drinks",
-  picture_url: "voda.jpeg"
+  picture_url: "voda.jpg"
 )
 
 FoodItem.create(
@@ -379,7 +379,7 @@ FoodItem.create(
   restaurant_id: Restaurant.find_by(name:"Black Iron Burger").id,
   description: "best soda",
   category: "Drinks",
-  picture_url: "coca_cola.jpeg"
+  picture_url: "coca_cola.jpg"
 )
 
   puts " end drinks"
