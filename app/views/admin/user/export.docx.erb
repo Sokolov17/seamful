@@ -1,0 +1,19 @@
+<html>
+  <head>
+  </head>
+    <body>
+      <h2><strong>User information:</strong></h2>
+      <p>Fullname: <%= @user.fullname %><br></p>
+      <p>Street Name: <%= @user.street_name %><br></p>
+      <p>City Name: <%= @user.city_name%><br></p>
+      <p>Zipcode: <%= @user.zipcode%><br></p>
+      <p>Phone Number: <%= @user.phone_num %><br></p>
+      <p>Credit Card: <%= @user.credit_card_num %><br></p>
+      <p>Email: <%= @user.email %><br></p>
+      <% if @user.admin %>
+     <p>Admin: true</p>
+     <% else %>
+     <p>Admin: false</p>
+     <% end %>
+    </body>
+</html>

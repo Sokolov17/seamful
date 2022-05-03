@@ -15,7 +15,9 @@
   <body>
     <%= render 'layouts/header' %>
     <h4 style="margin: 0 0 0 3%;font-family: 'Arial'; font-size: 16px;color: rgb(244,136,110)"> <%= flash[:notice] %> </h4>
+    <div>
     <%= yield %>
+    </div>
     <%= render 'layouts/footer' %>
   </body>
 </html>

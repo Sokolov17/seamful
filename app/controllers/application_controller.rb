@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   before_action :authorized
   helper_method :get_items_from_cart
   helper_method :logged_in?
+  helper_method :current_user
 
   def init_cart
     session[:cart] = []

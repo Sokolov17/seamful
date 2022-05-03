@@ -1,0 +1,68 @@
+<div class="user">
+   <div class="flex-container">
+       <h3 style="margin: 20px 0 0 0; color: white; font-family:'Pacifico', cursive; text-shadow: -1px 0 grey, -1px grey, 1px grey; font-size: 50px"> <%= @user.fullname %></h3>
+   </div>
+   <div class="flex-container link">
+           <div><%= link_to "Order History", user_orders_path,class: 'link-to-text-color' %></div>
+           <div><%= link_to "See all reviews", user_reviews_path,class: 'link-to-text-color' %></div>
+         <br>
+       <br>
+     <br>
+   </div>
+ <div class="flex-container info">
+     <p><%= @user.fullname %><br>
+     <%= @user.street_name %><br>
+     <%= @user.city_name%><br>
+     <%= @user.zipcode%><br>
+     <%= @user.phone_num %><br>
+     <%= @user.credit_card_num %><br>
+     <%= @user.email %><br>
+     <%= @user.password %><br>
+     <% if @user.admin %>
+     admin:true
+     <% else %>
+     admin:false
+     <% end %>
+     </p>
+  </div>
+     <br>
+      <div class="flex-container button1">
+        <div><%= link_to "Update Information", edit_admin_user_path(@user), class: "btn btn-info"%></div>
+        <div><%= button_to "Delete My Account", admin_user_path(@user), {method: :delete, class: "btn btn-info"}%></div>
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                  Export
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                  <li>
+                      <%= 
+                          link_to 'EXPORT JSON',
+                                  "/admin/export_json/#{@user.id}",
+                                  data: {method: :get},
+                                  class: "btn"
+                        %>
+                    </li>
+                    <li>
+                      <%= 
+                        link_to 'EXPORT EXCEL',
+                                "/admin/export/#{@user.id}.xlsx",
+                                data: {method: :get},
+                                class: "btn",
+                                target: "_blank"
+
+                      %>
+                    </li>
+                    <li>
+                      <%= 
+                        link_to 'EXPORT WORD',
+                                "/admin/export/#{@user.id}.docx",
+                                data: {method: :get},
+                                class: "btn",
+                                target: "_blank"
+
+                      %>
+                    </li>
+                </ul>
+      </div>
+ <br>
+</div>

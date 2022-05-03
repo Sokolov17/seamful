@@ -7,7 +7,12 @@
 
   <div class="flex-container two" style="margin: -2vh 0 0 0;">
     <div>
+    <% if session[:user_id] == nil %>
       <%=link_to "Become A Member", new_user_path, class: "btn btn-success"%>
+    <% end %>
+    <% if current_user %>
+    You are logged in
+    <% end %>
     </div>
     <div>
       <% if session[:user_id] == nil %>

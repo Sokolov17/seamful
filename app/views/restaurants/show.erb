@@ -33,8 +33,11 @@
       <div class="col-md-6 food-border">
         <h6><%= item.food_name %><h6>
           <p class="price"> $<%= item.price %></p>
+          <% unless item.picture_url.nil? %>
+        <%= image_tag(asset_path(item.picture_url), class: "container") %>
+      <% end %>
           <p class="description"><em><%= item.description %></em><p>
-            Quantity: <input type="number" name="items[<%= item.id %>]" min="0" step="1">
+            Quantity: <input type="number" name="items[<%= item.id %>]" min="0" step="1" max="100">
       </div>
       <% end %>
     <% end %>
@@ -53,8 +56,11 @@
     <div class="col-md-6 food-border">
       <h6><%= item.food_name %><h6>
         <p class="price"> $<%= item.price %></p>
+        <% unless item.picture_url.nil? %>
+        <%= image_tag(asset_path(item.picture_url), class: "container") %>
+      <% end %>
         <p class="description"><em><%= item.description %></em><p>
-          Quantity: <input type="number" name="items[<%= item.id %>]" min="0" step="1">
+          Quantity: <input type="number" name="items[<%= item.id %>]" min="0" step="1" max="100">
     </div>
     <% end %>
   <% end %>
@@ -71,9 +77,12 @@
     <% @restaurant.menu_category("Mains").each do |item| %>
     <div class="col-md-6 food-border">
       <h6><%= item.food_name %><h6>
-        <p class="price"> $<%= item.price %></p>
+      <p class="price"> $<%= item.price %></p>
+      <% unless item.picture_url.nil? %>
+        <%= image_tag(asset_path(item.picture_url), class: "container") %>
+      <% end %>
         <p class="description"><em><%= item.description %></em><p>
-          Quantity: <input type="number" name="items[<%= item.id %>]" min="0" step="1">
+          Quantity: <input type="number" name="items[<%= item.id %>]" min="0" step="1" max="100">
     </div>
     <% end %>
   <% end %>
@@ -90,13 +99,15 @@
     <div class="col-md-6 food-border">
       <h6><%= item.food_name %><h6>
         <p class="price"> $<%= item.price %></p>
+        <% unless item.picture_url.nil? %>
+        <%= image_tag(asset_path(item.picture_url), class: "container") %>
+      <% end %>
         <p class="description"><em><%= item.description %></em><p>
-          Quantity: <input type="number" name="items[<%= item.id %>]" min="0" step="1">
+          Quantity: <input type="number" name="items[<%= item.id %>]" min="0" step="1" max="100">
     </div>
     <% end %>
   <% end %>
   </div>
 </div>
-<br>
 <div ALIGN=CENTER><%= submit_tag "Add to Cart", class: "btn btn-primary" %></div>
 <% end %>

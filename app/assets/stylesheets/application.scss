@@ -114,9 +114,12 @@ span.nav-pad {
 }
 
 .footer {
-  height: 50px;
-  margin-top: 5px;
-  background-color: rgb(245,245,245);
+    margin-top: 50px;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(245,245,245);
 }
 
 .footer-info {

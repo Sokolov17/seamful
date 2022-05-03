@@ -29,5 +29,11 @@ Rails.application.routes.draw do
   get 'guide/mexican', to: 'guides#mexican', as: 'mexican'
   get 'guide/american', to: 'guides#american', as: 'american'
   get 'guide/thai', to: 'guides#thai', as: 'thai'
-
+  get 'admin/export/:id', to: 'admin/user#export'
+  get 'admin/export_json/:id', to: 'admin/user#export_json'
+  namespace :admin do
+    resources :user
+  end
+      
+    
 end

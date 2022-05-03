@@ -1,0 +1,16 @@
+wb = xlsx_package.workbook
+admin = false
+admin = true if @user.admin
+wb.add_worksheet(name: "Buttons") do |sheet| 
+  sheet.add_row ["user information"], types: [nil, :string]
+  sheet.add_row ["Fullname:", @user.fullname], types: [nil, :string]
+  sheet.add_row ["Street Name:", @user.street_name], types: [nil, :string]
+  sheet.add_row ["City Name:", @user.city_name], types: [nil, :string]
+  sheet.add_row ["Zipcode:", @user.zipcode], types: [nil, :string]
+  sheet.add_row ["Phone Number:", @user.phone_num], types: [nil, :string]
+  sheet.add_row ["Credit Card:", @user.credit_card_num], types: [nil, :string]
+  sheet.add_row ["Email:", @user.email], types: [nil, :string]
+  sheet.add_row ["Admin:", admin], types: [nil, :string]
+  sheet.add_row []
+  sheet.column_widths nil, 20
+end
