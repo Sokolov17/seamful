@@ -386,7 +386,15 @@ FoodItem.create(
 
 
 ############################## USERS ############################
-20.times do User.create(first_name: Faker::Name.unique.first_name, last_name:Faker::Name.unique.last_name, street_name: Faker::Address.street_address, city_name: Faker::Address.city, zipcode: Faker::Address.zip_code, state: Faker::Address.state_abbr, credit_card_num: Faker::Bank.account_number(digits:17), phone_num: Faker::PhoneNumber.phone_number, email: Faker::Internet.unique.email, password_digest: "password")
+20.times do User.create(first_name: Faker::Name.unique.first_name, 
+  last_name:Faker::Name.unique.last_name, 
+  street_name: Faker::Address.street_address, 
+  city_name: Faker::Address.city, zipcode: Faker::Address.zip_code, 
+  state: Faker::Address.state_abbr, 
+  credit_card_num: Faker::Bank.account_number(digits:16), 
+  phone_num: Faker::PhoneNumber.phone_number, 
+  email: Faker::Internet.unique.email, 
+  password_digest: "password")
 end
 p "created users"
 
