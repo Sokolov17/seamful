@@ -7,6 +7,7 @@ class User < ApplicationRecord
   validates :email, presence: true
   validates :first_name, presence: true
   validates :credit_card_num, length: {is: 16}
+  validates :phone_num, length: {is: 13}
 
 
   def fullname
