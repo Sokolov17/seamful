@@ -388,18 +388,3 @@ FoodItem.create(
 ############################## USERS ############################
 
 
-########### ORDERS ##################
-99.times do Order.create(restaurant_id: Restaurant.all.sample.id, user_id: User.all.sample.id)
-end
-p "created orders"
-
-##################### MENUORDERS ##########################
-99.times do Menuorder.create(order_id: Order.all.sample.id, food_item_id: FoodItem.all.sample.id)
-end
-
-p "created menuorder"
-
-#########################REVIEWS #########################
-99.times do Review.create(restaurant_id: Restaurant.all.sample.id, user_id: User.all.sample.id, rating: rand(1...5), content: Faker::Lorem.paragraph(6))
-end
-p "created reviews"
