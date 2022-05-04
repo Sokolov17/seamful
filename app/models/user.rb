@@ -11,7 +11,6 @@ class User < ApplicationRecord
   validates :street_name, format: { with: /\A[a-zA-Z]+\z/, message: "only allows letters" }, length: {minimum: 3}
   validates :state, format: { with: /\A[a-zA-Z]+\z/, message: "only allows letters" }, length: {minimum: 4}
   validates :zipcode, presence: true, :numericality => true, :length => { :minimum => 6, :maximum => 8}
-  validates :password, length: {minimum 6, maximim 120}  
   validates :credit_card_num, length: {is: 16}
   validates :phone_num, presence: true, :numericality => true, :length => { :minimum => 10, :maximum => 15 }
 
