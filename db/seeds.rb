@@ -247,16 +247,6 @@ FoodItem.create(
 puts " end mains"
 
 puts " desserts"
-FoodItem.create(
-  food_name: "Candy (Dragon Beard)",
-  price: 13,
-  restaurant_id: Restaurant.find_by(name:"Mission Chinese").id,
-  description: "It is difficult to compare the delicacy with our popular desserts, it is a cross between cotton candy and brushwood. 
-  Most of all it resembles Turkish pishmane, only with filler. 
-  Outwardly, it is a white cocoon, and inside it is a sweet filling.",
-  category: "Desserts",
-  picture_url: "dragon.jpeg"
-)
 
 FoodItem.create(
   food_name: "Berry mascarpone bagels",
