@@ -5,11 +5,7 @@ class User < ApplicationRecord
   has_many :restaurants, through: :orders
   validates :email, uniqueness: true
   validates :email, presence: true,
-  validates :first_name, presence: true, format: { with: /\A[a-zA-Z]+\z/, message: "only allows letters" }, length: {minimum: 3}
-  validates :last_name, presence: true, format: { with: /\A[a-zA-Z]+\z/, message: "only allows letters" }, length: {minimum: 2}
-  validates :city_name, format: { with: /\A[a-zA-Z]+\z/, message: "only allows letters" }, length: {minimum: 4}
-  validates :street_name, format: { with: /\A[a-zA-Z]+\z/, message: "only allows letters" }, length: {minimum: 3}
-  validates :state, format: { with: /\A[a-zA-Z]+\z/, message: "only allows letters" }, length: {minimum: 4}
+
 
 
 
