@@ -255,7 +255,7 @@ FoodItem.create(
   Most of all it resembles Turkish pishmane, only with filler. 
   Outwardly, it is a white cocoon, and inside it is a sweet filling.",
   category: "Desserts",
-  picture_url: "Candy.jpeg"
+  picture_url: "dragon.jpeg"
 )
 
 FoodItem.create(
@@ -386,31 +386,18 @@ FoodItem.create(
 
 
 ############################## USERS ############################
-20.times do User.create(first_name: Faker::Name.unique.first_name, 
-  last_name:Faker::Name.unique.last_name, 
-  street_name: Faker::Address.street_address, 
-  city_name: Faker::Address.city, zipcode: Faker::Address.zip_code, 
-  state: Faker::Address.state_abbr, 
-  credit_card_num: Faker::Bank.account_number(digits:16), 
-  phone_num: Faker::PhoneNumber.phone_number, 
+User.create(
+  first_name: "Igor", 
+  last_name: "Mask", 
+  street_name: "kualu", 
+  city_name: "Minsk", 
+  zipcode: 555555, 
+  state: "minskaya", 
+  credit_card_num: 1111222233334444, 
+  phone_num: 375443212211, 
   email: Faker::Internet.unique.email, 
   password_digest: "password")
 end
 p "created users"
 
 
-########### ORDERS ##################
-99.times do Order.create(restaurant_id: Restaurant.all.sample.id, user_id: User.all.sample.id)
-end
-p "created orders"
-
-##################### MENUORDERS ##########################
-99.times do Menuorder.create(order_id: Order.all.sample.id, food_item_id: FoodItem.all.sample.id)
-end
-
-p "created menuorder"
-
-#########################REVIEWS #########################
-99.times do Review.create(restaurant_id: Restaurant.all.sample.id, user_id: User.all.sample.id, rating: rand(1...5), content: Faker::Lorem.paragraph(6))
-end
-p "created reviews"
