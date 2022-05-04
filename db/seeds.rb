@@ -395,6 +395,6 @@ User.create(
   state: "minskaya", 
   credit_card_num: 1111222233334444, 
   phone_num: 375443212211, 
-  email: Faker::Internet.unique.email, 
+  email: "vvvvvv@gmail.com", 
   password_digest: "password")
 p "created users"
