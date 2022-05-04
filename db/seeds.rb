@@ -397,7 +397,4 @@ User.create(
   phone_num: 375443212211, 
   email: Faker::Internet.unique.email, 
   password_digest: "password")
-end
 p "created users"
-
-
