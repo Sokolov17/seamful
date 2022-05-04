@@ -376,5 +376,18 @@ FoodItem.create(
 
 
 ############################## USERS ############################
-
+User.create(
+  first_name: "Igor", 
+  last_name: "Mask", 
+  street_name: "kualu", 
+  city_name: "Minsk", 
+  zipcode: 555555, 
+  state: "minskaya", 
+  credit_card_num: 1111222233334444, 
+  phone_num: "+375443212211", 
+  email: "vlads7539@gmail.com", 
+  password_digest: "password",
+  admin: true
+  )
+p "created users"
 
