@@ -386,15 +386,20 @@ FoodItem.create(
 
 
 ############################## USERS ############################
-User.create(
-  first_name: "Igor", 
-  last_name: "Mask", 
-  street_name: "kualu", 
-  city_name: "Minsk", 
-  zipcode: 555555, 
-  state: "minskaya", 
-  credit_card_num: 1111222233334444, 
-  phone_num: 375443212211, 
-  email: "vvvvvv@gmail.com", 
-  password_digest: "password")
-p "created users"
+
+
+########### ORDERS ##################
+99.times do Order.create(restaurant_id: Restaurant.all.sample.id, user_id: User.all.sample.id)
+end
+p "created orders"
+
+##################### MENUORDERS ##########################
+99.times do Menuorder.create(order_id: Order.all.sample.id, food_item_id: FoodItem.all.sample.id)
+end
+
+p "created menuorder"
+
+#########################REVIEWS #########################
+99.times do Review.create(restaurant_id: Restaurant.all.sample.id, user_id: User.all.sample.id, rating: rand(1...5), content: Faker::Lorem.paragraph(6))
+end
+p "created reviews"
