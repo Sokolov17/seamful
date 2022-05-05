@@ -235,6 +235,14 @@ span.nav-pad {
     min-height: 80vh;
   }
 
+  .restaurant_background1{
+    background-image: url("restaurants_background.jpg");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    min-height: 70vh;
+  }
+
 
 
 
@@ -327,6 +335,16 @@ span.nav-pad {
   background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
+
+  .user1{
+    height: 70vh;
+    width: auto;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    background: #C6FFDD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
 
   .user p {
    color: white;
