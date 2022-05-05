@@ -10,7 +10,7 @@ class User < ApplicationRecord
   validates :city_name, format: { with: /\A[a-zA-Z]+\z/, message: "only allows letters" }, :length => { :minimum => 4, :maximum => 25}
   validates :state, format: { with: /\A[a-zA-Z]+\z/, message: "only allows letters" }, :length => { :minimum => 4, :maximum => 30}
   validates :zipcode, presence: true, :numericality => true, :length => { :minimum => 6, :maximum => 8}
-  validates :credit_card_num, :length => { :minimum => 6, :maximum => 120}
+  validates :credit_card_num, :numericality => true, :length => { :minimum => 6, :maximum => 120}
   validates :phone_num, presence: true, :numericality => true, :length => { :minimum => 10, :maximum => 15 }
 
 
