@@ -8,6 +8,7 @@ class OrdersController < ApplicationController
   def create
     rest_id = FoodItem.find(session[:cart].first).restaurant_id
     @order = Order.create(user_id: session[:user_id], restaurant_id: rest_id)
+    @order.update!(delivery_in: @order.created_at+rand(25..47).minutes)
     session[:cart].each do |food_id|
       Menuorder.create(order_id: @order.id, food_item_id: food_id)
     end
