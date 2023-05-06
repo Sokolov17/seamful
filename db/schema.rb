@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_06_200352) do
+ActiveRecord::Schema.define(version: 2023_05_06_141751) do
 
   create_table "food_items", force: :cascade do |t|
     t.string "food_name"
@@ -82,6 +82,8 @@ ActiveRecord::Schema.define(version: 2022_05_06_200352) do
     t.datetime "updated_at", null: false
     t.string "password_digest"
     t.boolean "admin"
+    t.boolean "email_confirmed"
+    t.string "confirm_token"
   end
 
 end

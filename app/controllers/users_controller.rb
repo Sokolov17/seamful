@@ -24,13 +24,27 @@ class UsersController < ApplicationController
     @user.city_name = user_params[:city_name].titleize
     @user.state = user_params[:state].titleize
     if @user.save
-      session[:user_id] = @user.id
-      flash[:notice] = "Welcome to Seamful, homie!"
-      redirect_to user_path(@user)
+      #session[:user_id] = @user.id
+      UserMailer.registration_confirmation(@user).deliver
+      flash[:success] = "Please confirm your email address to continue"
+      redirect_to home
     else
       render :new
     end
   end
+
+  def confirm_email
+    @user = User.find_by_confirm_token(params[:id])
+    if @user
+      @user.email_activate
+      flash[:success] = "Welcome to the Sample App! Your email has been confirmed.
+      Please sign in to continue."
+      redirect_to login
+    else
+      flash[:error] = "Sorry. User does not exist"
+      redirect_to home
+    end
+end
 
   def edit
     if current_user.id == @user.id
@@ -74,6 +88,7 @@ class UsersController < ApplicationController
     end
   end
 
+  
 
 private
 

@@ -34,6 +34,11 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :user
   end
+  resources :users do
+    member do
+      get :confirm_email
+    end
+  end
       
     
 end
