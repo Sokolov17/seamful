@@ -42,7 +42,14 @@
     <div>Total</div>
   </div>
   <div class="column4">
+    <%if session[:cart].empty?%>
       <div>$<%=@order.total %></div>
+    <%else%>
+      <div>$<%=@order.total %></div>
+      <% if DateTime.now < @order.delivery_in && TimeDifference.between(@order.delivery_in, DateTime.now).in_minutes.to_i != 0 %>
+      <%= button_to "Pay by Card", checkout_create_path(id: @order.id), remote: true, class: "btn btn-info"%>
+      <% end %> 
+    <%end%>
       <div>Charged to: XXXX-XXXX-XXXX-<%=@order.user.credit_card_num.slice(-4,4)%></div>
   </div>
 </div>

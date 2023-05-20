@@ -12,7 +12,7 @@ class OrdersController < ApplicationController
     session[:cart].each do |food_id|
       Menuorder.create(order_id: @order.id, food_item_id: food_id)
     end
-    init_cart
+    #init_cart
     redirect_to order_path(@order)
   end
 
