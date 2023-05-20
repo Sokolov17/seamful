@@ -1,5 +1,6 @@
-<div class="user">
-<h1 style="margin: 0; color: white; font-family:'Pacifico', cursive; text-shadow: -1px 0 grey, -1px grey, 1px grey; font-size: 50px"> <%= @user.fullname %>'s Orders </h1>
+
+<div>
+<h1 style="margin: 0; color: black; font-family:'Pacifico', cursive; text-shadow: -1px 0 grey, -1px grey, 1px grey; font-size: 50px"> <%= @user.fullname %>'s Orders </h1>
 
 <%@orders.each do |order|  %>
 <br><%= link_to order.restaurant.name, order_path(order) %>
@@ -7,3 +8,4 @@
 
   <% end %>
   </div>
+

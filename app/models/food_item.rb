@@ -4,7 +4,7 @@ class FoodItem < ApplicationRecord
   has_many :orders, through: :menuorders
 
   def self.most_expensive
-    FoodItem.all.sort_by{ |a| a.price }.last
+    FoodItem.maximum(:price)
   end
 
 

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :authorized, only: [:new, :create]
+  skip_before_action :authorized, only: [:new, :create, :confirm_email]
   before_action :set_user, only: [:show, :edit, :update, :destroy, :orders, :reviews]
 
   def index
@@ -26,10 +26,12 @@ class UsersController < ApplicationController
     if @user.save
       #session[:user_id] = @user.id
       UserMailer.registration_confirmation(@user).deliver
-      flash[:success] = "Please confirm your email address to continue"
-      redirect_to home
+      #flash[:notice] = "Please confirm your email address to continue"
+      #flash.keep
+      redirect_to home_path, notice:"Please confirm your email address to continue"
     else
-      render :new
+      #flash[:notice] = "Ooooppss, something went wrong!"
+      render :new, notice: "Ooooppss, something went wrong!" 
     end
   end
 
@@ -37,12 +39,12 @@ class UsersController < ApplicationController
     @user = User.find_by_confirm_token(params[:id])
     if @user
       @user.email_activate
-      flash[:success] = "Welcome to the Sample App! Your email has been confirmed.
-      Please sign in to continue."
-      redirect_to login
+      #flash[:notice] = "Welcome to the Sample App! Your email has been confirmed.Please sign in to continue."
+      #flash.keep
+      redirect_to login_path, notice:"Welcome to the Sample App! Your email has been confirmed.Please sign in to continue."
     else
-      flash[:error] = "Sorry. User does not exist"
-      redirect_to home
+      #flash[:notice] = "Sorry. User does not exist"
+      redirect_to home_path, notice:"Sorry. User does not exist"
     end
 end
 
@@ -77,15 +79,14 @@ end
   end
 
   def orders
-    @orders = Order.all.select do |order|
-      order.user == @user
-    end
+    @orders = Order.where(user: @user)
   end
 
   def reviews
-    @reviews = Review.all.select do |review|
-      review.user == @user
-    end
+    @reviews = Review.where(user: @user)
+  end
+
+  def recommendations
   end
 
   

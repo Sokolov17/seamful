@@ -4,8 +4,7 @@ class User < ApplicationRecord
   has_many :orders, dependent: :destroy
   has_many :reviews, dependent: :destroy
   has_many :restaurants, through: :orders
-  validates :email, uniqueness: true
-  validates :email, presence: true
+  validates :email, uniqueness: true, presence: true
   validates :first_name, presence: true, format: { with: /\A[a-zA-Z]+\z/, message: "only allows english letters" }, :length => { :minimum => 3, :maximum => 20}
   validates :last_name, presence: true, format: { with: /\A[a-zA-Z]+\z/, message: "only allows english letters" }, :length => { :minimum => 3, :maximum => 20}
   validates :city_name, format: { with: /\A[a-zA-Z]+\z/, message: "only allows english letters" }, :length => { :minimum => 4, :maximum => 25}
@@ -36,7 +35,7 @@ class User < ApplicationRecord
   private
   def confirmation_token
       if self.confirm_token.blank?
-          self.confirm_token = SecureRandom.urlsafe_base64.to_s
+         self.confirm_token = SecureRandom.urlsafe_base64.to_s
       end
   end
 

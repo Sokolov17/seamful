@@ -65,11 +65,7 @@ class Restaurant < ApplicationRecord
   end
 
   def revenue
-    sum=0
-    self.orders.each do |order|
-      sum += order.total
-    end
-    sum
+    self.orders.sum(&:total)
   end
 
 end

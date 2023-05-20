@@ -23,11 +23,7 @@ class Order < ApplicationRecord
   end
 
   def self.total_spend
-    sum=0
-    Order.all.each do |order|
-      sum += order.total
-    end
-    sum
+    Order.sum(&:total)
   end
 
 end

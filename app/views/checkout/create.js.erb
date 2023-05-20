@@ -1,0 +1,10 @@
+const stripe = Stripe('pk_test_51N5Bc0Jemle4GOwiSSdENFz4tI31cIBe52WStIIDzIHq7aYPB4tHp2Pbx0INmwU7gu7G13p9cODVUKlAMbRHvMXw00TQOi7Lq9');
+
+  stripe.redirectToCheckout({
+    sessionId: '<%= @session.id %>'
+  }).then(function (result)
+  {
+  });
+  
+
+  

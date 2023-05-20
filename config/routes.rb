@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :food_items
   resources :restaurants
   resources :users
+  #resources: checkout, only: [:create]
   get '/guide', to: 'static_pages#guide', as: 'guide'
   get '/about', to: 'static_pages#about', as: 'about'
   get '/contact', to: 'static_pages#contact', as: 'contact'
@@ -39,6 +40,7 @@ Rails.application.routes.draw do
       get :confirm_email
     end
   end
+  post 'checkout/create', to: 'checkout#create'
       
     
 end

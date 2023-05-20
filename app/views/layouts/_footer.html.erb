@@ -2,7 +2,13 @@
  <ul class="footer-info">
    <li><%= link_to "About", about_path, class: 'link-to-text-color' %></li>
    <li><%= link_to "Contact Us", contact_path, class: 'link-to-text-color' %></li>
-   <li><%= link_to "Past Orders", orders_path, class: 'link-to-text-color' %></li>
+   <li>
+   <% if logged_in? %>
+   <% if current_user.admin? %>
+   <%= link_to "Past Orders", orders_path, class: 'link-to-text-color' %>
+   <% end %>
+   <% end %>
+   </li>
  </ul>
 
 </div>
